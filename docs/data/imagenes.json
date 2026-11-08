@@ -68,6 +68,23 @@
     "etiqueta": "Imagen ilustrativa",
     "producto": false
   },
+  "M01": {
+    "base": "m01_terraza_atardecer",
+    "ancho": 1462,
+    "alto": 816,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1462
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa",
+    "producto": false
+  },
   "F02": {
     "base": "f02_stand_festival",
     "ancho": 1440,
