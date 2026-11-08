@@ -52,6 +52,22 @@
     "etiqueta": "Imagen ilustrativa del producto",
     "producto": true
   },
+  "P04": {
+    "base": "p04_navidad_botella_caja",
+    "ancho": 1103,
+    "alto": 876,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1103
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa del producto",
+    "producto": true
+  },
   "P05": {
     "base": "p05_navidad_mesa",
     "ancho": 1536,
