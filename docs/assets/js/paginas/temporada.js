@@ -1,5 +1,5 @@
 // /q/temporada/: cambia de contenido sin reimprimir el QR.
-//   ?t=L01&d=2027-11-20  → tardeo de ese local y fecha, con el módulo «Desbloqueo»
+//   ?t=L01&d=2027-11-20  → tardeo de ese local y fecha, con el registro de las 20 primeras (kit)
 //   ?g=G01               → tarjeta de estante de una tienda gourmet
 //   sin parámetros       → lo que marque config.json (temporada)
 import { $, params, cargarJSON, temporada, navidadActiva, track, esc, url, ICONOS } from '../nucleo.js';
@@ -16,7 +16,7 @@ if (t) {
   ante.textContent = 'Tardeo de invierno';
   h1.textContent = local ? `${local.nombre}` : 'Tardeo de invierno';
   entr.innerHTML = local
-    ? `${esc(local.barrio)} (${esc(local.provincia)}) · ${fecha ? esc(fecha) : 'fecha <span class="pendiente">[PENDIENTE]</span>'} · <span class="marca-ejemplo">Ejemplo</span><br>Regístrate: las 20 primeras reciben el kit, y después está el pulsador.`
+    ? `${esc(local.barrio)} (${esc(local.provincia)}) · ${fecha ? esc(fecha) : 'fecha <span class="pendiente">[PENDIENTE]</span>'} · <span class="marca-ejemplo">Ejemplo</span><br>Regístrate: las 20 primeras reciben el kit.`
     : 'No reconocemos este local. Prueba con el QR del tardeo.';
   $('#temporada-acciones').hidden = true;
   $('#temporada-tardeo').hidden = false;

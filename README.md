@@ -72,12 +72,12 @@ Abre http://localhost:8080/docs/ (o sirve la carpeta padre con un enlace `flamen
 
 | Clave | Qué hace |
 | --- | --- |
-| `modo_demostracion` | `true`: topes de 5, etiquetas «Demostración», botones de reinicio, selector de estados de Navidad y «Forzar acierto» en el pulsador |
+| `modo_demostracion` | `true`: topes de 5, etiquetas «Demostración», botones de reinicio, selector de estados de Navidad, «Simular sorteo» en /eventos/ y la casilla de horario |
 | `temporada.modo` | `auto` o `prelanzamiento`, `festivales`, `tardeos`, `navidad`, `verano`: qué muestra /q/temporada/ sin parámetros |
 | `navidad.activa` | `auto` (según el estado), `true` o `false`: entrada del menú y bloque del inicio |
 | `navidad.estado` | `auto` (por fecha) o `aviso`, `primeros`, `abierta`, `reyes`, `cerrada` |
-| `topes` / `topes_demo` | Plazas por ciudad, primeras de festival (100) y de tardeo (20), noches de Villa Flamenco por festival (2) |
-| `pulsador` | Objetivo (5,00 s), precisión (0,01 s = a la centésima), intentos por día |
+| `topes` / `topes_demo` | Plazas por ciudad, primeras de festival (100) y de tardeo (20), y cuántas primeras inscripciones de cada ciudad entran en el sorteo de Villa Flamenco (100; 3 en la demo) |
+| `edades` | 18 para todo; 21 para el sorteo de Villa Flamenco |
 | `horario_venta` | Horario de pedidos y entregas (8:00 a 22:00, hora de Madrid). `simular_fuera_de_horario: true` simula la noche en la demo; también hay una casilla en el carrito y en el checkout |
 | `ga4_id` | ID de GA4. Con `G-XXXXXXX` no se carga nada |
 

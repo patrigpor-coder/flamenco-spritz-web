@@ -24,14 +24,15 @@ if (!res) {
       track('event_confirm', { ciudad });
     }
     const sello = $('#tpl-sello').innerHTML;
-    zona.innerHTML = `<div class="llave desbloqueado">
+    zona.innerHTML = `<div class="tarjeta-codigo desbloqueado">
       ${sello}
-      <p class="antetitulo">Tu llave</p>
+      <p class="antetitulo">Tu entrada</p>
       <h2 style="font-size:2.4rem;margin:0">${esc(ev.ciudad)}</h2>
       <p style="margin:4px 0 0">${esc(ev.fecha_texto)} · Lugar y hora: <span class="pendiente">[PENDIENTE]</span></p>
       <div class="qr-entrada">${await qrSVG(r.codigo, 200)}</div>
       <p class="codigo">${esc(r.codigo)}</p>
       <p class="pequeno">${esc(r.email)}</p>
+      ${r.sorteo === 'si' ? '<p class="pequeno"><strong>Estás en el sorteo de una noche en Villa Flamenco.</strong></p>' : ''}
       <div class="aviso" style="text-align:left"><p><strong>En la puerta te pediremos el DNI.</strong> La entrada es personal y se valida una sola vez.</p></div>
     </div>`;
   }

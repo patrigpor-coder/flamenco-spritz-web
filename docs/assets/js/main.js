@@ -41,7 +41,7 @@ function capaEdad() {
           </div>
         </fieldset>
         <p class="error-campo" id="edad-error" role="alert"></p>
-        <button class="btn btn--bloque" type="submit">Desbloquear ${ICONOS.flecha}</button>
+        <button class="btn btn--bloque" type="submit">Entrar ${ICONOS.flecha}</button>
       </form>
       <p class="pequeno suave">No guardamos tu fecha: solo recordamos, durante esta visita, que has superado la verificación.</p>
       <p class="franja">Prototipo académico (TFM del Máster GESCO, ESIC Granada). No es la web oficial de Bodegas Muñana. No se vende ni se envía nada.<br>El vino solo se disfruta con moderación. No compartir con menores de 18 años.</p>
@@ -150,17 +150,36 @@ function iniciarCabecera() {
   const btn = $('.btn-menu');
   const menu = $('#menu-movil');
   if (btn && menu) {
-    const cerrar = () => { menu.classList.remove('abierto'); btn.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; btn.focus(); };
-    btn.addEventListener('click', () => { menu.classList.add('abierto'); btn.setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; $('a, button', menu)?.focus(); });
-    $('.btn-cerrar-menu', menu)?.addEventListener('click', cerrar);
+    const abierto = () => !menu.hidden;
+    const cerrar = (devolverFoco = true) => {
+      if (!abierto()) return;
+      menu.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Abrir menú');
+      document.documentElement.classList.remove('menu-abierto');
+      if (devolverFoco) btn.focus();
+    };
+    const abrir = () => {
+      menu.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      btn.setAttribute('aria-label', 'Cerrar menú');
+      document.documentElement.classList.add('menu-abierto');
+      $('a, button', menu)?.focus();
+    };
+    btn.addEventListener('click', () => (abierto() ? cerrar() : abrir()));
+    $('.btn-cerrar-menu', menu)?.addEventListener('click', () => cerrar());
+    // Al pulsar un enlace del menú, se cierra (también si lleva a la misma página).
+    menu.addEventListener('click', (ev) => { if (ev.target.closest('a')) cerrar(false); });
+    document.addEventListener('keydown', (ev) => { if (ev.key === 'Escape' && abierto()) cerrar(); });
     menu.addEventListener('keydown', (ev) => {
-      if (ev.key === 'Escape') cerrar();
-      if (ev.key === 'Tab') {
-        const f = $$('a, button', menu); const pri = f[0], ult = f[f.length - 1];
-        if (ev.shiftKey && document.activeElement === pri) { ev.preventDefault(); ult.focus(); }
-        else if (!ev.shiftKey && document.activeElement === ult) { ev.preventDefault(); pri.focus(); }
-      }
+      if (ev.key !== 'Tab') return;
+      const f = $$('a, button', menu); const pri = f[0], ult = f[f.length - 1];
+      if (ev.shiftKey && document.activeElement === pri) { ev.preventDefault(); ult.focus(); }
+      else if (!ev.shiftKey && document.activeElement === ult) { ev.preventDefault(); pri.focus(); }
     });
+    // Si se pasa a escritorio con el menú abierto, o se vuelve con «atrás», el menú queda cerrado.
+    matchMedia('(min-width: 1024px)').addEventListener('change', (e) => { if (e.matches) cerrar(false); });
+    window.addEventListener('pageshow', () => cerrar(false));
   }
   const pintar = () => {
     const n = leerCarrito().reduce((s, l) => s + l.cantidad, 0);

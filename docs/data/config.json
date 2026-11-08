@@ -35,7 +35,7 @@
     },
     "festival_primeras": 100,
     "tardeo_primeras": 20,
-    "noches_villa_por_festival": 2
+    "sorteo_villa_primeras": 100
   },
   "topes_demo": {
     "eventos": {
@@ -45,14 +45,7 @@
     },
     "festival_primeras": 5,
     "tardeo_primeras": 5,
-    "noches_villa_por_festival": 2
-  },
-  "pulsador": {
-    "objetivo_segundos": 5.0,
-    "_precision": "Se gana si el cronómetro, redondeado a esta precisión, marca exactamente el objetivo. 0.01 = a la centésima.",
-    "precision_segundos": 0.01,
-    "intentos_por_persona_y_dia": 1,
-    "permitir_forzar_acierto_en_demo": true
+    "sorteo_villa_primeras": 3
   },
   "contador_compartido": {
     "_nota": "No hay servicio gratuito sin datos personales que podamos garantizar: el contador es local de cada móvil y se marca como demostración. Ver README.",
@@ -69,5 +62,9 @@
     "hasta": "22:00",
     "_simular": "Solo en modo demostración: true simula que es de noche (también se puede activar con la casilla del carrito o del checkout).",
     "simular_fuera_de_horario": false
+  },
+  "sorteo_villa": {
+    "_nota": "Una noche en Villa Flamenco por ciudad, sorteada entre las primeras personas inscritas (topes.sorteo_villa_primeras) con 21 años o más, que van con un acompañante mayor de edad. En la demo, el botón «Simular sorteo» de /eventos/ elige a una persona al azar.",
+    "noches_por_ciudad": 1
   }
 }

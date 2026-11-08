@@ -11,7 +11,7 @@ La tabla se regenera sola con `python3 scripts/procesar-fotos.py`. En la web, ca
 | --- | --- | --- | --- | --- |
 | P04 | `p04_navidad_botella_caja.png` | Botella de 50 cl con su caja | No subida | /, /navidad/, /q/temporada/, /tienda/ |
 | P05 | `p05_navidad_mesa.jpg` | Mesa de diciembre con adultos | No subida | /navidad/ |
-| K01 | `k01_kit.jpg` | Copa de balón, posavasos y caja kraft | No subida | /festivales/, /q/desbloquea/ |
+| K01 | `k01_kit.jpg` | Copa de balón, posavasos y caja kraft | No subida | /festivales/, /q/desbloquea/, /tardeos/ |
 | K02 | `k02_copa_hielo.jpg` | Copa de balón con hielo y spritz blanco | No subida | /journal/frizzante-o-spritz/, /journal/vino-blanco-con-hielo/, /q/ritual/, /rituales/ |
 | M01 | `m01_terraza_atardecer.jpg` | Terraza al atardecer con adultos | No subida | /, /journal/tinto-de-verano-blanco/ |
 | M02 | `m02_tardeo_invierno.jpg` | Interior de bar en invierno | No subida | /q/temporada/, /tardeos/ |
@@ -19,7 +19,7 @@ La tabla se regenera sola con `python3 scripts/procesar-fotos.py`. En la web, ca
 | O01 | `o01_vinedo_altura.jpg` | Viñedo de altura con montaña | No subida | /origen/, /spritz/ |
 | O02 | `o02_bodega.jpg` | Interior de bodega | No subida | /origen/ |
 | O03 | `o03_uva_manos.jpg` | Racimo o vendimia a mano | No subida | /journal/spritz-flor-de-sauco/, /origen/ |
-| V01 | `v01_villa.jpg` | Casa rural entre viñedos | No subida | /festivales/, /q/desbloquea/ |
+| V01 | `v01_villa.jpg` | Casa rural entre viñedos | No subida | /eventos/ |
 | C01 | `c01_granada.jpg` | Granada | No subida | /donde-encontrarlo/, /eventos/ |
 | C02 | `c02_malaga.jpg` | Málaga | No subida | /donde-encontrarlo/, /eventos/ |
 | C03 | `c03_sevilla.jpg` | Sevilla | No subida | /donde-encontrarlo/, /eventos/ |
@@ -56,7 +56,9 @@ Además, en `fotos/creditos.csv` faltan **autor, licencia y enlace** de todas la
 
 | Dato | Dónde |
 | --- | --- |
-| Lugar y hora de los tres eventos de prelanzamiento | /eventos/, «Tu llave», `eventos.json` |
+| Lugar y hora de los tres eventos de prelanzamiento | /eventos/, «Tu entrada», `eventos.json` |
+| Sorteo de Villa Flamenco en los eventos: fecha, forma del sorteo (ante notario o herramienta verificable) y cómo se avisa a quien gana | /eventos/, bases del sorteo |
+| **Camisetas de los festivales: cómo se entregan** (ya no hay pulsador; las camisetas son solo para los festivales) | /festivales/, bases de «Las 100 primeras» |
 | Fechas exactas de Interestelar, Brisa y Granada Sound | /festivales/, `festivales.json` |
 | Fecha exacta de cada tardeo (L01-L09) y en qué mes va cada uno | /tardeos/, /q/temporada/, `eventos.json`, `04_registro_qr.csv` (`d=AAAA-MM-DD`) |
 | Mecánica completa y premio de la ruta «Desbloquea tu barrio» | /momentos/ |
@@ -76,15 +78,15 @@ Además, en `fotos/creditos.csv` faltan **autor, licencia y enlace** de todas la
 | Dato | Dónde |
 | --- | --- |
 | Titular de la web real: razón social, NIF, domicilio, registro y contacto | Aviso legal, privacidad, condiciones de venta, correo de confirmación |
-| Organizador de las acciones | Bases de «Las 100 primeras» y del pulsador |
+| Organizador de las acciones | Bases de «Las 100 primeras» y del sorteo de Villa Flamenco |
 | Delegado de protección de datos, plazos de conservación y encargados del tratamiento | Privacidad |
-| Fiscalidad de los premios en especie | Bases del pulsador |
+| Fiscalidad del premio en especie (noche en Villa Flamenco) | Bases del sorteo |
 | Jurisdicción aplicable | Aviso legal |
 | Texto y artículos del Código del vino (actualización de 2026) | `07_cumplimiento.md` |
 | Artículo exacto de la norma andaluza que prohíbe vender y entregar alcohol entre las 22:00 y las 8:00 (la web ya lo aplica) | `07_cumplimiento.md`, checkout, /envios/ |
 | Logo de Wine in Moderation: solo cuando la bodega esté adherida al programa (exigido por el código OIVE 2026) | Piezas visuales de la web real |
 | Artículo exacto y enlace de la Ley 4/1997 de Andalucía; normativa estatal vigente sobre alcohol y menores; requisitos de la venta a distancia de alcohol | `07_cumplimiento.md` |
-| Revisión jurídica de las 21 años de Villa Flamenco y de todas las páginas legales | Bases del pulsador |
+| Revisión jurídica de los 21 años del sorteo de Villa Flamenco y de todas las páginas legales | Bases del sorteo |
 
 ## 7. Contenido del journal
 
@@ -109,7 +111,16 @@ Datos que los artículos necesitarían y no están en el anexo (se muestran como
 4. **`utm_content` del QR de tardeo.** La lista del plan no tiene un valor propio para el QR del tardeo; se usa `barra`. Si se prefiere distinguirlo, añadir `tardeo` a la lista cerrada.
 5. **Cartel (CART).** El banco pide «solo la versión sin Rosé ni Pistacho»; cuando se suba, comprobarlo antes de publicar.
 6. **Stand de festival (F02).** Es una imagen generada con IA en la que aparecen caras de personas generadas (no reales) y producto servido. Se publica con «Imagen generada con IA», como pide el encargo, pero conviene revisar que nadie aparente menos de 25 años (criterio propio del equipo, más exigente que el código del vino).
-7. **Edades y premios.** El anexo dice que quien gana el pulsador «gana una camiseta» y que en festivales hay «además» dos noches. La web da la camiseta a todo acierto y, en festivales, añade la noche a quien tiene 21 o más mientras queden noches de ese festival (por orden de acierto). Confirmar que es la mecánica deseada.
+7. **Pulsador eliminado; sorteo en los eventos.** El equipo ha quitado el pulsador (cronómetro de 5 segundos) de toda la web. En su lugar, en /eventos/ («Prueba tu suerte»), se sortea una noche en Villa Flamenco por ciudad entre las 100 primeras personas inscritas con 21 años o más, que van con un acompañante mayor de edad. En la demo, el sorteo entra entre las 3 primeras (`topes_demo.sorteo_villa_primeras`) para poder enseñar también una inscripción sin sorteo. Las personas de 18 a 20 años se inscriben igual, pero no entran en el sorteo.
+   - **Decisión pendiente del equipo: las noches de Villa Flamenco en los festivales.** El plan preveía dos noches por festival (seis ganadores); han desaparecido de la web. Hay que decidir si se recuperan con otra mecánica o se eliminan del plan.
+   - **Camisetas:** solo en los festivales. Cómo se entregan está pendiente. En el prelanzamiento no hay camisetas, y en los tardeos solo hay kit para las 20 primeras.
+   - La antigua dirección /legal/bases-pulsador-villa-flamenco/ redirige a /legal/bases-sorteo-villa-flamenco/.
+   - Los eventos de GA4 `button_game_try` y `button_game_win` desaparecen; entra `raffle_entry`. Los eventos `unlock_code_issued` y `unlock_sold_out` mantienen su nombre para no romper la medición, aunque en la web el código se llama ahora «Kit nº X de 100».
+
 8. **Tardeos por mes.** Se sabe que son tres por ciudad entre noviembre de 2027 y febrero de 2028, pero no en qué mes va cada uno: en la web no se asigna mes.
 9. **Navidad en 2026.** Con `estado: auto`, hoy (noviembre de 2026) la web muestra la campaña «Abierta», aunque la primera Navidad real del producto sería la de 2027. Para la defensa se puede fijar el estado en `config.json` o con el selector de la demo.
 10. **Logo reducido en la cabecera.** Es una composición vertical (flamenco sobre el nombre); a 56 px de alto el nombre queda pequeño. Si el equipo tiene una versión horizontal, mejoraría la cabecera.
+11. **Textos directos, sin metáforas.** La web ya no usa la metáfora de marca anterior ni botones «Desbloquear»: los textos son directos («Entrar», «Registrarme», «Recibir la guía», «Tu entrada», «Kit nº X de 100»). Se mantienen el claim «Desbloquea tu aventura» (dentro del logo), el nombre de las rutas «Desbloquea tu barrio» y los hashtags. La dirección del QR /q/desbloquea/ no cambia, porque ya está en los QR del tribunal.
+12. **Datos de origen actualizados por el equipo.** La web dice «a 1.188 metros de altitud», sin comparativos y sin «según la bodega», y «La finca tiene 189 hectáreas». El anexo del encargo decía 180 hectáreas, «no todas de viñedo», y pedía presentar la altitud como dato de la bodega: confirmar con la bodega la cifra de hectáreas y la fuente de la altitud.
+13. **`plan/00_encargo.md` no se toca.** Es la copia del encargo original y conserva sus textos originales (la metáfora de marca, el pulsador, TikTok, la denominación anterior, 180 hectáreas…). Lo que vale es lo que dice la web y el resto de `plan/`.
+

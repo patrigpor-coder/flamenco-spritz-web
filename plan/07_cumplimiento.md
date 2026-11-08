@@ -57,7 +57,7 @@ Lo que aplica la web, según los principios habituales de estos códigos (verifi
 
 [BOE-A-2022-11589](https://www.boe.es/buscar/act.php?id=BOE-A-2022-11589)
 
-- La noche en Villa Flamenco exige 21 años; el resto, 18. Es una decisión del equipo, justificada en las bases (/legal/bases-pulsador-villa-flamenco/) con el art. 4.2 (diferencia de trato justificada por una finalidad legítima, adecuada, necesaria y proporcionada) y el art. 17 (acceso a bienes y servicios). Medida proporcionada: nadie queda fuera del juego; con 18-20 años el premio es la camiseta.
+- El sorteo de una noche en Villa Flamenco (eventos de prelanzamiento, una por ciudad) exige 21 años; el resto, 18. Es una decisión del equipo, justificada en las bases (/legal/bases-sorteo-villa-flamenco/) con el art. 4.2 (diferencia de trato justificada por una finalidad legítima, adecuada, necesaria y proporcionada) y el art. 17 (acceso a bienes y servicios). Medida proporcionada: con 18 a 20 años te inscribes en el evento igual; solo quedas fuera del sorteo.
 
 ## Venta a distancia de alcohol: España y Andalucía
 

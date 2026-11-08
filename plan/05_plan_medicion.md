@@ -31,11 +31,10 @@
 | `qr_landing_view` | Llega con `utm_source=qr` o a una página /q/ (una vez por sesión y URL) | `soporte` (utm_content o s), `pagina`, `campana` |
 | `event_signup` | Reserva plaza (o la recibe desde la lista de espera) | `ciudad`, `desde` |
 | `event_waitlist` | Entra en lista de espera | `ciudad` |
-| `event_confirm` | Confirma la plaza (abre «Tu llave») | `ciudad` |
-| `unlock_code_issued` | Recibe «Desbloqueo nº X» | `accion`, `numero`, `tipo` |
+| `event_confirm` | Confirma la plaza (ve «Tu entrada») | `ciudad` |
+| `raffle_entry` | Entra en el sorteo de Villa Flamenco (inscripción entre las 100 primeras de su ciudad, con 21 años o más) | `ciudad`, `orden` |
+| `unlock_code_issued` | Recibe «Kit nº X» en un festival o tardeo | `accion`, `numero`, `tipo` |
 | `unlock_sold_out` | Se registra con el cupo agotado | `accion`, `tipo` |
-| `button_game_try` | Intento del pulsador | `accion`, `tiempo` |
-| `button_game_win` | Acierto | `accion`, `premio` (`camiseta` o `noche`) |
 | `newsletter_signup` | Confirma la doble aceptación | `origen` |
 | `guide_download` | Desbloquea un imán | `iman`, `origen` |
 | `locator_search` | Busca en el localizador | `provincia`, `tipo`, `cp` (sí/no), `navidad` |
@@ -59,7 +58,7 @@ Fuente: GA4 (conector nativo), filtrando `demo = false` en producción.
 | 2. Localizador (trabajo n.º 1) | ¿Mandamos gente a bares y tiendas? | `locator_search` y `click_directions` por provincia y tipo; ratio clic/búsqueda |
 | 3. QR por soporte | ¿Qué soporte rinde? | Tabla `utm_campaign` × `utm_content` con escaneos, registros y compras |
 | 4. Prelanzamiento | ¿Llegamos a 500 inscritos y 500 en espera? | Indicador por ciudad frente al objetivo (100/200/200 plazas); confirmaciones en 48 h |
-| 5. Activaciones | Desbloqueos y pulsador | Desbloqueos por festival/tardeo frente al cupo; intentos y aciertos; noches asignadas |
+| 5. Activaciones | Kits y sorteo | Kits por festival/tardeo frente al cupo; inscritos en el sorteo de Villa Flamenco por ciudad (`raffle_entry`) |
 | 6. Tienda | ¿Llegamos al 5 % online? | Ingresos, pedidos, botellas por pedido (supuesto del plan: 5), mix Original/Navidad, abandono por paso |
 | 7. Navidad | ¿Se vende la mitad online? | Ventas por estado de campaña; avisos («Avísame») y su conversión |
 | 8. Base de datos propia | ¿Crece la base? | Altas de newsletter por origen; imanes descargados; contactos con más de un origen |
