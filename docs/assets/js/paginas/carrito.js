@@ -1,4 +1,4 @@
-import { $, lineasCarrito, leerCarrito, guardarCarrito, track, itemGA, euros, url, esc, navidadComprable, miniatura } from '../nucleo.js';
+import { $, lineasCarrito, leerCarrito, guardarCarrito, track, itemGA, euros, url, esc, navidadComprable, miniatura, iniciarSimuladorHorario } from '../nucleo.js';
 
 const zona = $('#lineas-carrito');
 let primera = true;
@@ -53,3 +53,4 @@ zona.addEventListener('click', (ev) => {
 zona.addEventListener('change', (ev) => { if (ev.target.matches('input[data-sku]')) cambiar(ev.target.dataset.sku, Math.max(1, parseInt(ev.target.value, 10) || 1)); });
 $('#btn-tramitar').addEventListener('click', (ev) => { if (ev.currentTarget.hasAttribute('data-bloqueado')) ev.preventDefault(); });
 pintar();
+iniciarSimuladorHorario((fuera) => { $('#aviso-horario').hidden = !fuera; });

@@ -32,6 +32,8 @@ Además, en `fotos/creditos.csv` faltan **autor, licencia y enlace** de todas la
 
 ## 2. Datos de producto
 
+- **Denominación pendiente de validar con la receta (Reg. UE 251/2014: vino ≥ 50 % del volumen).** En la web figura «Bebida aromatizada a base de vino».
+
 | Dato | Dónde aparece |
 | --- | --- |
 | Ingredientes y alérgenos de la Original y de la Edición de Navidad | /producto/, /tienda/original/, /tienda/navidad/ |
@@ -65,7 +67,7 @@ Además, en `fotos/creditos.csv` faltan **autor, licencia y enlace** de todas la
 
 | Dato | Dónde |
 | --- | --- |
-| Cuentas de Instagram y TikTok, y enlace del canal de difusión | /comunidad/, /q/comunidad/ |
+| Cuenta de Instagram y enlace del canal de difusión | /comunidad/, /q/comunidad/ |
 | Contacto de prensa y dossier | /prensa/ |
 | Recursos de consumo responsable (programas del sector y de las administraciones) | /consumo-responsable/ |
 
@@ -79,6 +81,8 @@ Además, en `fotos/creditos.csv` faltan **autor, licencia y enlace** de todas la
 | Fiscalidad de los premios en especie | Bases del pulsador |
 | Jurisdicción aplicable | Aviso legal |
 | Texto y artículos del Código del vino (actualización de 2026) | `07_cumplimiento.md` |
+| Artículo exacto de la norma andaluza que prohíbe vender y entregar alcohol entre las 22:00 y las 8:00 (la web ya lo aplica) | `07_cumplimiento.md`, checkout, /envios/ |
+| Logo de Wine in Moderation: solo cuando la bodega esté adherida al programa (exigido por el código OIVE 2026) | Piezas visuales de la web real |
 | Artículo exacto y enlace de la Ley 4/1997 de Andalucía; normativa estatal vigente sobre alcohol y menores; requisitos de la venta a distancia de alcohol | `07_cumplimiento.md` |
 | Revisión jurídica de las 21 años de Villa Flamenco y de todas las páginas legales | Bases del pulsador |
 
@@ -104,7 +108,7 @@ Datos que los artículos necesitarían y no están en el anexo (se muestran como
 3. **`utm_campaign` sin valor para soportes permanentes.** El plan da `prelanzamiento`, `festival`, `tardeo` y `navidad`; el vaso y el posavasos de los locales y la tarjeta de estante no pertenecen a ninguna. Se han añadido `locales` y `gourmet` (ver `03_convencion_utm.md`).
 4. **`utm_content` del QR de tardeo.** La lista del plan no tiene un valor propio para el QR del tardeo; se usa `barra`. Si se prefiere distinguirlo, añadir `tardeo` a la lista cerrada.
 5. **Cartel (CART).** El banco pide «solo la versión sin Rosé ni Pistacho»; cuando se suba, comprobarlo antes de publicar.
-6. **Stand de festival (F02).** Es una imagen generada con IA en la que aparecen caras de personas generadas (no reales) y producto servido. Se publica con «Imagen generada con IA», como pide el encargo, pero conviene revisar con el criterio del código del vino que nadie aparente menos de 25 años.
+6. **Stand de festival (F02).** Es una imagen generada con IA en la que aparecen caras de personas generadas (no reales) y producto servido. Se publica con «Imagen generada con IA», como pide el encargo, pero conviene revisar que nadie aparente menos de 25 años (criterio propio del equipo, más exigente que el código del vino).
 7. **Edades y premios.** El anexo dice que quien gana el pulsador «gana una camiseta» y que en festivales hay «además» dos noches. La web da la camiseta a todo acierto y, en festivales, añade la noche a quien tiene 21 o más mientras queden noches de ese festival (por orden de acierto). Confirmar que es la mecánica deseada.
 8. **Tardeos por mes.** Se sabe que son tres por ciudad entre noviembre de 2027 y febrero de 2028, pero no en qué mes va cada uno: en la web no se asigna mes.
 9. **Navidad en 2026.** Con `estado: auto`, hoy (noviembre de 2026) la web muestra la campaña «Abierta», aunque la primera Navidad real del producto sería la de 2027. Para la defensa se puede fijar el estado en `config.json` o con el selector de la demo.
