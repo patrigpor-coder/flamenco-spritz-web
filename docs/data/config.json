@@ -1,0 +1,57 @@
+{
+  "_nota": "Interruptores del prototipo. Cambia los valores y recarga: no hace falta compilar nada.",
+  "url_publica": "https://patrigpor-coder.github.io/flamenco-spritz-web/",
+  "modo_demostracion": true,
+  "ga4_id": "G-XXXXXXX",
+  "temporada": {
+    "_opciones": "auto | prelanzamiento | festivales | tardeos | navidad | verano",
+    "modo": "auto"
+  },
+  "navidad": {
+    "_opciones_activa": "auto (según el estado) | true | false",
+    "activa": "auto",
+    "_opciones_estado": "auto (según la fecha) | aviso | primeros | abierta | reyes | cerrada",
+    "estado": "auto",
+    "selector_visible_en_demo": true,
+    "calendario": {
+      "aviso_desde": "10-20",
+      "primeros_desde": "11-02",
+      "primeros_horas": 72,
+      "abierta_desde": "11-05",
+      "abierta_hasta": "12-25",
+      "reyes_desde": "12-26",
+      "reyes_hasta": "01-06"
+    }
+  },
+  "edades": {
+    "minima": 18,
+    "villa_flamenco": 21
+  },
+  "topes": {
+    "eventos": { "granada": 100, "malaga": 200, "sevilla": 200 },
+    "festival_primeras": 100,
+    "tardeo_primeras": 20,
+    "noches_villa_por_festival": 2
+  },
+  "topes_demo": {
+    "eventos": { "granada": 5, "malaga": 5, "sevilla": 5 },
+    "festival_primeras": 5,
+    "tardeo_primeras": 5,
+    "noches_villa_por_festival": 2
+  },
+  "pulsador": {
+    "objetivo_segundos": 5.0,
+    "_precision": "Se gana si el cronómetro, redondeado a esta precisión, marca exactamente el objetivo. 0.01 = a la centésima.",
+    "precision_segundos": 0.01,
+    "intentos_por_persona_y_dia": 1,
+    "permitir_forzar_acierto_en_demo": true
+  },
+  "contador_compartido": {
+    "_nota": "No hay servicio gratuito sin datos personales que podamos garantizar: el contador es local de cada móvil y se marca como demostración. Ver README.",
+    "activo": false
+  },
+  "envio": {
+    "plazo": "24 a 48 horas desde la bodega",
+    "gastos_demo": 0
+  }
+}

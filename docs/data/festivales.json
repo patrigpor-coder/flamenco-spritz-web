@@ -1,0 +1,33 @@
+{
+  "_nota": "Las fechas exactas de los festivales están pendientes.",
+  "stand": "Stand de 24 m²",
+  "festivales": [
+    {
+      "codigo": "int",
+      "nombre": "Interestelar",
+      "ciudad": "Sevilla",
+      "mes": "2027-05",
+      "mes_texto": "Mayo de 2027",
+      "dias": 2,
+      "fechas": "[PENDIENTE]"
+    },
+    {
+      "codigo": "bri",
+      "nombre": "Brisa",
+      "ciudad": "Málaga",
+      "mes": "2027-07",
+      "mes_texto": "Julio de 2027",
+      "dias": 3,
+      "fechas": "[PENDIENTE]"
+    },
+    {
+      "codigo": "gso",
+      "nombre": "Granada Sound",
+      "ciudad": "Granada",
+      "mes": "2027-09",
+      "mes_texto": "Septiembre de 2027",
+      "dias": 2,
+      "fechas": "[PENDIENTE]"
+    }
+  ]
+}
