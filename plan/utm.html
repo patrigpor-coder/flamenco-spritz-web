@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Compositor de UTM · Flamenco Spritz (herramienta interna)</title>
+<style>
+  :root { --morado:#2B1E33; --iris:#5B2A86; --lino:#F7F3EC; --lino2:#EFE8DA; --error:#8A1F2B; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background:var(--lino); color:var(--morado); line-height:1.5; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.8rem; margin: 0 0 4px; }
+  .nota { font-size:.875rem; }
+  form { display:grid; gap:14px; margin-top:24px; }
+  label { display:grid; gap:4px; font-weight:600; font-size:.9rem; }
+  select, input { font: inherit; padding: 10px; border:1px solid #8A7F91; border-radius:2px; background:#fff; color:var(--morado); min-height:44px; }
+  .fila { display:grid; gap:14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  output { display:block; word-break: break-all; background:#fff; padding:14px; border-left:3px solid var(--iris); font-family: ui-monospace, Menlo, monospace; font-size:.85rem; }
+  button { font: inherit; background: var(--iris); color: var(--lino); border:0; padding: 12px 18px; cursor:pointer; min-height:44px; }
+  button:focus-visible, select:focus-visible, input:focus-visible { outline:3px solid var(--iris); outline-offset:2px; }
+  .ok { color: #2B4A1E; } .ko { color: var(--error); font-weight:600; }
+  ul { padding-left: 1.2em; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Compositor de UTM</h1>
+  <p class="nota">Herramienta interna del plan (no se publica). Compone la dirección de un QR con la convención de <code>03_convencion_utm.md</code> y la valida: minúsculas, sin tildes, guion bajo y lista cerrada. Prototipo académico.</p>
+  <form id="f">
+    <div class="fila">
+      <label>Página
+        <select id="pagina">
+          <option value="eventos/">/eventos/</option>
+          <option value="q/desbloquea/">/q/desbloquea/</option>
+          <option value="q/temporada/">/q/temporada/</option>
+          <option value="q/ritual/">/q/ritual/</option>
+          <option value="q/comunidad/">/q/comunidad/</option>
+          <option value="navidad/">/navidad/</option>
+          <option value="demo/panel/">/demo/panel/</option>
+        </select>
+      </label>
+      <label>Parámetros de página <input id="params" placeholder="f=int&amp;s=barra"></label>
+    </div>
+    <div class="fila">
+      <label>utm_source <select id="utm_source"></select></label>
+      <label>utm_medium <select id="utm_medium"></select></label>
+    </div>
+    <div class="fila">
+      <label>utm_campaign <select id="utm_campaign"></select></label>
+      <label>utm_content <select id="utm_content"></select></label>
+    </div>
+  </form>
+  <h2>Dirección final</h2>
+  <output id="salida" aria-live="polite"></output>
+  <p><button type="button" id="copiar">Copiar</button></p>
+  <h2>Validación</h2>
+  <ul id="validacion" aria-live="polite"></ul>
+  <h2>Validar una dirección existente</h2>
+  <label>Pega una dirección <input id="pegada" placeholder="https://patrigpor-coder.github.io/flamenco-spritz-web/..."></label>
+  <ul id="validacion2" aria-live="polite"></ul>
+</main>
+<script>
+const BASE = 'https://patrigpor-coder.github.io/flamenco-spritz-web/';
+const LISTAS = {
+  utm_source: ['qr', 'instagram', 'tiktok', 'inf01', 'inf02', 'inf03', 'inf04', 'inf05', 'inf06'],
+  utm_medium: ['offline', 'paid_social', 'influencer'],
+  utm_campaign: ['prelanzamiento', 'festival', 'tardeo', 'navidad', 'locales', 'gourmet', 'defensa_tfm'],
+  utm_content: ['barra', 'botella', 'vaso', 'rincon', 'cabina', 'posavasos', 'kit', 'estante', 'cartel', 'anuncio', 'enlace', 'qr1_eventos', 'qr2_desbloquea', 'qr3_navidad', 'qr4_panel'],
+};
+const PARAMS = { ciudad: ['granada', 'malaga', 'sevilla'], f: ['int', 'bri', 'gso'], s: ['barra', 'botella', 'vaso', 'rincon', 'cabina'], e: ['granada', 'malaga', 'sevilla', 'int', 'bri', 'gso'], t: ['L01','L02','L03','L04','L05','L06','L07','L08','L09'], l: ['L01','L02','L03','L04','L05','L06','L07','L08','L09'], k: ['int', 'bri', 'gso', 'tardeo'], g: ['G01','G02','G03','G04','G05','G06'], d: null, estado: ['aviso','primeros','abierta','reyes','cerrada'], acceso: ['anticipado'] };
+const PAGINAS = ['', 'eventos/', 'eventos/inscripcion/', 'q/desbloquea/', 'q/temporada/', 'q/ritual/', 'q/comunidad/', 'navidad/', 'demo/panel/'];
+for (const [k, vs] of Object.entries(LISTAS)) document.getElementById(k).innerHTML = vs.map((v) => `<option>${v}</option>`).join('');
+const $ = (id) => document.getElementById(id);
+
+function validar(u) {
+  const r = [];
+  let url;
+  try { url = new URL(u); } catch { return [['ko', 'No es una dirección válida.']]; }
+  if (!u.startsWith(BASE)) r.push(['ko', 'No empieza por el dominio público del proyecto.']);
+  const ruta = url.pathname.replace('/flamenco-spritz-web/', '');
+  if (ruta === '') r.push(['ko', 'Un QR nunca lleva a la portada.']);
+  else if (!PAGINAS.includes(ruta)) r.push(['ko', `Página no prevista para QR: /${ruta}`]);
+  for (const [k, v] of url.searchParams) {
+    if (LISTAS[k]) { if (!LISTAS[k].includes(v)) r.push(['ko', `${k}=${v} no está en la lista cerrada.`]); }
+    else if (k in PARAMS) { if (PARAMS[k] && !PARAMS[k].includes(v)) r.push(['ko', `${k}=${v} no es un valor previsto.`]); if (k === 'd' && !/^\d{4}-\d{2}-\d{2}$/.test(v)) r.push(['ko', 'd debe ser AAAA-MM-DD.']); }
+    else r.push(['ko', `Parámetro desconocido: ${k}`]);
+    if (LISTAS[k] && (/[A-ZÁÉÍÓÚÑ\s]/.test(v) || /[áéíóúñ]/.test(v))) r.push(['ko', `${k} debe ir en minúsculas, sin tildes ni espacios.`]);
+  }
+  for (const k of Object.keys(LISTAS)) if (!url.searchParams.has(k)) r.push(['ko', `Falta ${k}.`]);
+  if (!r.length) r.push(['ok', 'Dirección correcta según la convención.']);
+  return r;
+}
+const pintar = (ul, r) => { ul.innerHTML = r.map(([c, t]) => `<li class="${c}">${c === 'ok' ? '✓' : '✗'} ${t}</li>`).join(''); };
+
+function componer() {
+  const p = $('params').value.trim().replace(/^[?&]/, '');
+  const utm = Object.keys(LISTAS).map((k) => `${k}=${$(k).value}`).join('&');
+  const u = `${BASE}${$('pagina').value}?${p ? p + '&' : ''}${utm}`;
+  $('salida').textContent = u;
+  pintar($('validacion'), validar(u));
+}
+$('f').addEventListener('input', componer);
+$('pegada').addEventListener('input', (e) => pintar($('validacion2'), e.target.value ? validar(e.target.value.trim()) : []));
+$('copiar').addEventListener('click', () => navigator.clipboard?.writeText($('salida').textContent).then(() => { $('copiar').textContent = 'Copiada'; setTimeout(() => ($('copiar').textContent = 'Copiar'), 1500); }));
+componer();
+</script>
+</body>
+</html>

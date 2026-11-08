@@ -15,8 +15,8 @@
   --lino-2: #EFE8DA;      /* Lino oscuro: bloques */
   --caramelo: #C9973F;    /* Caramel Brown: acentos (nunca texto sobre lino) */
   --eucalipto: #A8B88A;   /* Eucalyptus Green: éxito y origen (fondo, con texto morado) */
-  --texto-suave: #4E4356; /* Morado aclarado: 8,6:1 sobre lino */
-  --error: #8A1F2B;       /* Rojo vino para errores: 7,9:1 sobre lino */
+  --texto-suave: #4E4356; /* Morado aclarado: 8,4:1 sobre lino */
+  --error: #8A1F2B;       /* Rojo vino para errores: 8,2:1 sobre lino */
   --blanco: #FFFFFF;
 
   --serif: "Instrument Serif", "Times New Roman", Georgia, serif;
@@ -425,3 +425,9 @@ html.edad-pendiente body::before { content: ""; position: fixed; inset: 0; backg
 .galeria-botella .foto { width: 100%; }
 .galeria-botella .foto figcaption, .marco .foto figcaption { text-align: center; }
 .botella-inicio img { max-height: 520px; }
+.pie__legal a, .franja-academica a { text-decoration: underline; }
+.solo-t { display: none; } html[data-q="t"] .solo-t { display: block; } html[data-q="t"] .no-t { display: none; }
+html[data-q="g"] .no-t { display: none; }
+html[data-q="g"] #temporada-bloques { min-height: 1100px; }
+@media (min-width: 768px) { html[data-q="g"] #temporada-bloques { min-height: 640px; } }
+html[data-q="l"] #ritual-contexto, html[data-q="k"] #ritual-contexto { min-height: 104px; }

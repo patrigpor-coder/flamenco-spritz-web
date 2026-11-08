@@ -10,9 +10,12 @@
 <link rel="icon" href="../../assets/img/logo/simbolo.svg" type="image/svg+xml">
 <link rel="preload" href="../../assets/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../../assets/fonts/poppins-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/poppins-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../../assets/css/main.css">
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});try{if(sessionStorage.getItem('fs_edad')!=='ok'&&!/\/(edad|legal)\//.test(location.pathname))document.documentElement.classList.add('edad-pendiente')}catch(e){}</script>
+<script data-logo="../../assets/img/logo/logo_completo.svg">var qm=location.search.match(/[?&](t|g|l|k)=/);if(qm)document.documentElement.dataset.q=qm[1];window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});try{if(sessionStorage.getItem('fs_edad')!=='ok'&&!/\/(edad|legal)\//.test(location.pathname)){document.documentElement.classList.add('edad-pendiente');var l=document.createElement('link');l.rel='preload';l.as='image';l.href=document.currentScript.dataset.logo;document.head.appendChild(l)}}catch(e){}</script>
 <script type="module" src="../../assets/js/main.js"></script>
+<link rel="modulepreload" href="../../assets/js/nucleo.js">
+<link rel="modulepreload" href="../../assets/js/formularios.js">
 
 </head>
 <body data-pagina="temporada">
@@ -51,16 +54,17 @@
 </header>
 <main id="contenido" tabindex="-1">
 
-<div class="banda-demo" data-solo-demo hidden><div class="contenedor"><span class="marca-demo">Demostración</span> Topes de 5 en lugar de 20. Prueba con ?t=L01&amp;d=2027-11-20 o con ?g=G01. <button type="button" class="btn btn--sec" style="min-height:36px;padding:6px 14px;margin-left:8px" id="reiniciar-desbloqueo">Reiniciar la demo</button></div></div>
+<div class="banda-demo" data-solo-demo><div class="contenedor"><span class="marca-demo">Demostración</span> Topes de 5 en lugar de 20. Prueba con ?t=L01&amp;d=2027-11-20 o con ?g=G01. <button type="button" class="btn btn--sec" style="min-height:36px;padding:6px 14px;margin-left:8px" id="reiniciar-desbloqueo">Reiniciar la demo</button></div></div>
 <section class="cabecera-pagina" style="padding-bottom:24px">
   <div class="contenedor estrecho">
     <p class="antetitulo" id="temporada-ante">Ahora</p>
     <h1 id="temporada-h1">Lo que toca esta temporada</h1>
     <p class="entradilla" id="temporada-entradilla" style="min-height:3em"></p>
-    <div id="temporada-acciones"><div class="acciones"><a class="btn" href="../../donde-encontrarlo/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Dónde tomarlo cerca</a><a class="btn btn--sec" href="../../tienda/">Ir a la tienda <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div></div>
+    <div id="temporada-acciones" class="no-t"><div class="acciones"><a class="btn" href="../../donde-encontrarlo/"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg> Dónde tomarlo cerca</a><a class="btn btn--sec" href="../../tienda/">Ir a la tienda <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div></div>
   </div>
 </section>
-<div id="temporada-tardeo" hidden>
+<div id="temporada-bloques">
+<div id="temporada-tardeo" class="solo-t">
   <section class="contenedor estrecho"><!--foto id=M02 alt="Interior de un bar con luz cálida en invierno" ratio=16/9 sizes="(min-width: 728px) 680px, 100vw"--><figure class="foto foto--pendiente " style="aspect-ratio:16/9"><div class="foto-hueco" role="img" aria-label="Foto pendiente M02"><span>[FOTO PENDIENTE: M02]</span></div></figure><!--/foto--></section>
   
 <section class="seccion" id="desbloqueo" data-tipo="tardeo" aria-labelledby="t-desb">
@@ -129,6 +133,7 @@
       </div>
     </div>
   </section>
+</div>
 </div>
 <section class="seccion seccion--lino2"><div class="contenedor estrecho centro"><p class="moderacion">El vino solo se disfruta con moderación. No compartir con menores de 18 años.</p></div></section>
 </main>

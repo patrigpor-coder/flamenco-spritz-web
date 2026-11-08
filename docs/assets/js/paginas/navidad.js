@@ -5,8 +5,8 @@ const config = await cargarConfig();
 const cal = config.navidad.calendario;
 const zona = $('#navidad-estado');
 
-if (config.modo_demostracion && config.navidad.selector_visible_en_demo) {
-  $('#selector-navidad').hidden = false;
+if (!(config.modo_demostracion && config.navidad.selector_visible_en_demo)) $('#selector-navidad').hidden = true;
+else {
   $('#selector-navidad').addEventListener('click', (ev) => {
     const b = ev.target.closest('[data-estado]');
     if (!b) return;

@@ -201,7 +201,8 @@ iniciarCabecera();
 iniciarPie();
 iniciarRevelado();
 iniciarCaptacion();
-cargarConfig().then((c) => { if (c.modo_demostracion) $$('[data-solo-demo]').forEach((e) => (e.hidden = false)); }).catch(() => {});
+// Las bandas de demostración están visibles en el HTML (sin saltos de maquetación); se ocultan si la demo está apagada.
+cargarConfig().then((c) => { if (!c.modo_demostracion) $$('[data-solo-demo]').forEach((e) => (e.hidden = true)); }).catch(() => {});
 const pagina = document.body.dataset.pagina;
 const moduloPagina = pagina ? import(`./paginas/${pagina}.js`).catch((e) => console.warn('Módulo de página no disponible:', pagina, e)) : null;
 iniciarEdad().then(() => { if (!exenta || !/\/edad\//.test(ruta)) bannerCookies(); });

@@ -63,6 +63,8 @@ def leer_creditos():
             if not fila or not fila[0].strip():
                 continue
             fila = (fila + [""] * 10)[:10]
+            # Rosé y Pistacho están fuera del horizonte del plan: no se nombran en la web.
+            fila[2] = re.sub(r"\s*(sin|con)\s+Ros[ée]\s+(ni|y)\s+Pistacho", "", fila[2], flags=re.I)
             filas.append({
                 "id": fila[0].strip(),
                 "archivo": fila[1].strip(),

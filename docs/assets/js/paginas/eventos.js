@@ -19,5 +19,9 @@ async function pintar() {
 $('#reiniciar-eventos')?.addEventListener('click', () => {
   if (confirm('¿Reiniciar las plazas de los eventos en este móvil?')) { guardar('fs_eventos', {}); pintar(); }
 });
+// Si llega de un anuncio de una ciudad (?ciudad=), esa tarjeta va primero y destacada.
+const ciudad = new URLSearchParams(location.search).get('ciudad');
+const destacada = ciudad && $(`[data-ciudad="${CSS.escape(ciudad)}"]`);
+if (destacada) { destacada.style.order = '-1'; destacada.style.outline = '2px solid var(--iris)'; }
 pintar();
 window.addEventListener('pageshow', pintar);
