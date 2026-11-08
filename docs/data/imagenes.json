@@ -1,0 +1,88 @@
+{
+  "LOGO-C": {
+    "base": "logo_completo",
+    "svg": true,
+    "ancho": 720,
+    "alto": 676,
+    "etiqueta": "",
+    "producto": false
+  },
+  "LOGO-R": {
+    "base": "logo_reducido",
+    "svg": true,
+    "ancho": 664,
+    "alto": 567,
+    "etiqueta": "",
+    "producto": false
+  },
+  "SIMBOLO": {
+    "base": "simbolo",
+    "svg": true,
+    "ancho": 1200,
+    "alto": 1800,
+    "etiqueta": "",
+    "producto": false
+  },
+  "SELLO": {
+    "base": "sello",
+    "ancho": 551,
+    "alto": 662,
+    "anchos": [
+      320,
+      480,
+      551
+    ],
+    "avif": true,
+    "transparente": true,
+    "etiqueta": "",
+    "producto": false
+  },
+  "P01": {
+    "base": "p01_original_frontal",
+    "ancho": 661,
+    "alto": 2159,
+    "anchos": [
+      320,
+      480,
+      640,
+      661
+    ],
+    "avif": true,
+    "transparente": true,
+    "etiqueta": "Imagen ilustrativa del producto",
+    "producto": true
+  },
+  "K03": {
+    "base": "k03_camiseta",
+    "ancho": 1118,
+    "alto": 471,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1118
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa",
+    "producto": false
+  },
+  "F02": {
+    "base": "f02_stand_festival",
+    "ancho": 1440,
+    "alto": 779,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1440
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen generada con IA",
+    "producto": false
+  }
+}

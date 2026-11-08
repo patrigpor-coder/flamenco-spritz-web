@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verificación de edad · Flamenco Spritz</title>
+<meta name="description" content="Verificación de edad: esta web es solo para mayores de 18 años.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F7F3EC">
+<link rel="icon" href="../assets/img/logo/simbolo.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/instrument-serif-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/poppins-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/main.css">
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});try{if(sessionStorage.getItem('fs_edad')!=='ok'&&!/\/(edad|legal)\//.test(location.pathname))document.documentElement.classList.add('edad-pendiente')}catch(e){}</script>
+<script type="module" src="../assets/js/main.js"></script>
+
+</head>
+<body data-pagina="edad">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="franja-academica" role="note"><strong>Prototipo académico</strong> (TFM del Máster GESCO, ESIC Granada). No es la web oficial de Bodegas Muñana. No se vende ni se envía nada.</div>
+<header class="cabecera"><div class="contenedor cabecera__fila"><span class="cabecera__logo"><img src="../assets/img/logo/logo_reducido.svg" width="66" height="56" alt="Flamenco Spritz"></span></div></header>
+<main id="contenido" tabindex="-1">
+
+<section class="seccion"><div class="contenedor estrecho centro" id="edad-contenido" style="min-height:60vh">
+  <img src="../assets/img/logo/logo_completo.svg" width="220" height="207" alt="Flamenco Spritz. Desbloquea tu aventura. By Bodegas Muñana · 1188 metros" style="margin:0 auto 32px">
+  <div id="edad-formulario">
+    <h1 style="font-size:clamp(2rem,7vw,3rem)">Antes de entrar, tu fecha de nacimiento</h1>
+    <p>Solo pueden entrar personas de 18 años o más.</p>
+    <form class="form" id="form-edad-pagina" novalidate style="max-width:420px;margin:0 auto;text-align:left">
+      <fieldset><legend class="sr">Fecha de nacimiento</legend>
+        <div class="fecha-campos">
+          <div class="campo"><label for="ep-d">Día</label><input id="ep-d" inputmode="numeric" maxlength="2" placeholder="DD" required></div>
+          <div class="campo"><label for="ep-m">Mes</label><input id="ep-m" inputmode="numeric" maxlength="2" placeholder="MM" required></div>
+          <div class="campo"><label for="ep-a">Año</label><input id="ep-a" inputmode="numeric" maxlength="4" placeholder="AAAA" required></div>
+        </div>
+      </fieldset>
+      <p class="error-campo" id="ep-error" role="alert"></p>
+      <button class="btn btn--bloque" type="submit">Desbloquear <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+    </form>
+  </div>
+  <div id="edad-neutra" hidden>
+    <h1 style="font-size:clamp(2rem,7vw,3rem)">Gracias por tu visita</h1>
+    <p>Esta web es solo para personas mayores de 18 años, así que no podemos mostrarte su contenido.</p>
+    <p class="suave pequeno">Prototipo académico (TFM del Máster GESCO, ESIC Granada).</p>
+  </div>
+</div></section>
+</main>
+<footer class="pie">
+  <div class="contenedor">
+    <div class="pie__logo"><img src="../assets/img/logo/logo_completo-claro.svg" width="220" height="207" alt="Flamenco Spritz. Desbloquea tu aventura. By Bodegas Muñana · 1188 metros" loading="lazy"></div>
+    
+    <p class="pie__moderacion">El vino solo se disfruta con moderación. No compartir con menores de 18 años.</p>
+    <div class="pie__legal">
+      <p><strong>Prototipo académico</strong> (TFM del Máster GESCO, ESIC Granada). No es la web oficial de Bodegas Muñana. No se vende ni se envía nada.</p>
+      
+      <p>Fotografías: ver <a href="../creditos/">créditos</a>. Tipografías Instrument Serif y Poppins con licencia SIL Open Font License, alojadas en esta web.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

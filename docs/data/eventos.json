@@ -1,0 +1,101 @@
+{
+  "_nota": "Fechas y plazas del anexo. Lo que falta va como [PENDIENTE].",
+  "prelanzamiento": [
+    {
+      "id": "granada",
+      "ciudad": "Granada",
+      "fecha": "2027-05-01",
+      "fecha_texto": "1 de mayo de 2027",
+      "plazas": 100,
+      "lugar": "[PENDIENTE]",
+      "hora": "[PENDIENTE]",
+      "foto": "C01"
+    },
+    {
+      "id": "malaga",
+      "ciudad": "Málaga",
+      "fecha": "2027-05-02",
+      "fecha_texto": "2 de mayo de 2027",
+      "plazas": 200,
+      "lugar": "[PENDIENTE]",
+      "hora": "[PENDIENTE]",
+      "foto": "C02"
+    },
+    {
+      "id": "sevilla",
+      "ciudad": "Sevilla",
+      "fecha": "2027-05-03",
+      "fecha_texto": "3 de mayo de 2027",
+      "plazas": 200,
+      "lugar": "[PENDIENTE]",
+      "hora": "[PENDIENTE]",
+      "foto": "C03"
+    }
+  ],
+  "tardeos": [
+    {
+      "local": "L01",
+      "ciudad": "Granada",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    },
+    {
+      "local": "L02",
+      "ciudad": "Granada",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    },
+    {
+      "local": "L03",
+      "ciudad": "Granada",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    },
+    {
+      "local": "L04",
+      "ciudad": "Málaga",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    },
+    {
+      "local": "L05",
+      "ciudad": "Málaga",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    },
+    {
+      "local": "L06",
+      "ciudad": "Málaga",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    },
+    {
+      "local": "L07",
+      "ciudad": "Sevilla",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    },
+    {
+      "local": "L08",
+      "ciudad": "Sevilla",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    },
+    {
+      "local": "L09",
+      "ciudad": "Sevilla",
+      "mes": "[PENDIENTE]",
+      "mes_texto": "Entre noviembre de 2027 y febrero de 2028",
+      "fecha": "[PENDIENTE]"
+    }
+  ],
+  "tardeos_nota": "Nueve tardeos, tres por ciudad, de noviembre de 2027 a febrero de 2028, en locales que ya venden la Original. Fecha exacta de cada uno: [PENDIENTE]."
+}
