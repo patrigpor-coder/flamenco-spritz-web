@@ -1,0 +1,28 @@
+﻿id,archivo,que_muestra,"fuente (propia, bodega, Unsplash, Pexels...)",autor,licencia,enlace,cara_reconocible (si/no),permiso_firmado (si/no),etiqueta_en_la_web
+LOGO-C,logo_completo.svg,"Logo completo (vectorizado, fondo transparente)",Propia (equipo),,,,no,,
+LOGO-R,logo_reducido.svg,Flamenco y FLAMENCO SPRITZ (vectorizado),Propia (equipo),,,,no,,
+SIMBOLO,simbolo.svg,Solo el flamenco de línea,Propia (equipo),,,,no,,
+SELLO,sello.png,Medallón dorado con el flamenco (sin texto),Propia (equipo),,,,no,,
+P01,p01_original_frontal.png,"Botella Original de frente, fondo transparente",Render del equipo,,,,no,,Imagen ilustrativa del producto
+P02,p02_original_tres_cuartos.png,Botella Original en tres cuartos (opcional),Render propio,,,,no,,Imagen ilustrativa del producto
+P03,p03_original_relieve.jpg,Primer plano del relieve sobre el vidrio (opcional),Render propio,,,,no,,Imagen ilustrativa del producto
+P04,p04_navidad_botella_caja.png,Botella de 50 cl con su caja,Render propio,,,,no,,Imagen ilustrativa del producto
+P05,p05_navidad_mesa.jpg,Mesa de diciembre con adultos,,,,,,,Imagen ilustrativa
+K01,k01_kit.jpg,"Copa de balón, posavasos y caja kraft",,,,,no,,
+K02,k02_copa_hielo.jpg,Copa de balón con hielo y spritz blanco,,,,,no,,Imagen ilustrativa
+K03,k03_camiseta.png,"Camiseta del premio, delante y detrás",Propia (equipo),,,,no,,Imagen ilustrativa
+M01,m01_terraza_atardecer.jpg,Terraza al atardecer con adultos,,,,,,,Imagen ilustrativa
+M02,m02_tardeo_invierno.jpg,Interior de bar en invierno,,,,,,,Imagen ilustrativa
+M03,m03_plan_pequeno.jpg,Dos o tres amigos en una barra o plaza,,,,,,,Imagen ilustrativa
+O01,o01_vinedo_altura.jpg,Viñedo de altura con montaña,,,,,no,,
+O02,o02_bodega.jpg,Interior de bodega,,,,,no,,
+O03,o03_uva_manos.jpg,Racimo o vendimia a mano,,,,,,,
+V01,v01_villa.jpg,Casa rural entre viñedos,,,,,no,,
+C01,c01_granada.jpg,Granada,,,,,no,,
+C02,c02_malaga.jpg,Málaga,,,,,no,,
+C03,c03_sevilla.jpg,Sevilla,,,,,no,,
+F01,f01_festival.jpg,Público adulto en un festival,,,,,,,Imagen ilustrativa
+F02,f02_stand_festival.jpg,Recreación del stand de festival,"Propia (equipo, con IA)",,,,no (generadas con IA),,Imagen generada con IA
+G01,g01_tienda_gourmet.jpg,Estantería de tienda gourmet,,,,,no,,Imagen ilustrativa
+E01,e01_envio_caja.jpg,Caja de envío con botellas,,,,,no,,Imagen ilustrativa
+CART,cartel_vertical.jpg,Cartel «Desbloquea tu aventura» sin Rosé ni Pistacho,"Propia (equipo, con IA)",,,,no,,Imagen generada con IA
