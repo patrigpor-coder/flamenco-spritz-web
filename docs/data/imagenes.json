@@ -52,6 +52,23 @@
     "etiqueta": "Imagen ilustrativa del producto",
     "producto": true
   },
+  "P05": {
+    "base": "p05_navidad_mesa",
+    "ancho": 1536,
+    "alto": 2752,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1536
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa",
+    "producto": false
+  },
   "K03": {
     "base": "k03_camiseta",
     "ancho": 1118,

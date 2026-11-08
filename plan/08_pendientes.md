@@ -10,7 +10,6 @@ La tabla se regenera sola con `python3 scripts/procesar-fotos.py`. En la web, ca
 | ID | Archivo | Qué muestra | Motivo | Páginas con hueco |
 | --- | --- | --- | --- | --- |
 | P04 | `p04_navidad_botella_caja.png` | Botella de 50 cl con su caja | No subida | /, /navidad/, /q/temporada/, /tienda/ |
-| P05 | `p05_navidad_mesa.jpg` | Mesa de diciembre con adultos | No subida | /navidad/ |
 | K01 | `k01_kit.jpg` | Copa de balón, posavasos y caja kraft | No subida | /festivales/, /q/desbloquea/, /tardeos/ |
 | K02 | `k02_copa_hielo.jpg` | Copa de balón con hielo y spritz blanco | No subida | /journal/frizzante-o-spritz/, /journal/vino-blanco-con-hielo/, /q/ritual/, /rituales/ |
 | M02 | `m02_tardeo_invierno.jpg` | Interior de bar en invierno | No subida | /q/temporada/, /tardeos/ |
