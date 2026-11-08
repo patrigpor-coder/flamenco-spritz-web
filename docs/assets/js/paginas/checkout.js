@@ -1,5 +1,5 @@
 // Checkout en tres pasos: datos y edad, envío y pago simulado. Compra como invitado.
-import { $, $$, lineasCarrito, guardarCarrito, track, itemGA, euros, url, esc, leer, guardar, guardarContacto, navidadComprable, miniatura } from '../nucleo.js';
+import { $, $$, lineasCarrito, guardarCarrito, track, itemGA, euros, url, esc, leer, guardar, guardarContacto, navidadComprable, miniatura, fueraDeHorario, iniciarSimuladorHorario } from '../nucleo.js';
 import { validar, activarValidacionEnVivo, datosFormulario } from '../formularios.js';
 import { guardarPedido, nuevoNumero } from '../pedidos.js';
 
@@ -19,6 +19,15 @@ $('#resumen-total').textContent = euros(total);
 if (matchMedia('(max-width: 959px)').matches) $('#resumen').removeAttribute('open');
 
 track('begin_checkout', { currency: 'EUR', value: total, items });
+
+// Horario: entre las 22:00 y las 8:00 (hora de Madrid) no se admiten pedidos. El carrito se conserva.
+function aplicarHorario(fuera) {
+  $('#fuera-horario').hidden = !fuera;
+  $('.progreso').hidden = fuera;
+  $('.checkout > div:first-child').hidden = fuera;
+  if (fuera) { $('#fuera-horario').focus(); track('checkout_fuera_horario', { value: total }); }
+}
+await iniciarSimuladorHorario(aplicarHorario);
 
 const pasos = { 1: $('#paso-1'), 2: $('#paso-2'), 3: $('#paso-3') };
 function ir(n) {
@@ -80,7 +89,8 @@ $('#pago-ko').addEventListener('click', () => {
   $('#pago-ok').textContent = 'Reintentar: simular pago aceptado';
 });
 
-$('#pago-ok').addEventListener('click', () => {
+$('#pago-ok').addEventListener('click', async () => {
+  if (await fueraDeHorario()) { aplicarHorario(true); return; }
   pagoInfo();
   const numero = nuevoNumero();
   const ahora = new Date().toISOString();

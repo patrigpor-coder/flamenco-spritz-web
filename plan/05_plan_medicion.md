@@ -42,6 +42,7 @@
 | `click_directions` | Pulsa «Cómo llegar» | `punto`, `origen` |
 | `horeca_lead` | Envía el alta de local | `tipo`, `provincia` |
 | `season_page_view` | Ve /navidad/ o /q/temporada/ | `temporada`, `estado`, `local`, `tienda` |
+| `checkout_fuera_horario` | Llega al checkout entre las 22:00 y las 8:00 (o con la simulación de la demo) | `value` |
 | `community_click` | Pulsa una red o envía el vídeo de la cabina | `red`, `soporte`, `permiso_video` |
 
 **Conversiones clave en GA4:** `purchase`, `event_signup`, `unlock_code_issued`, `newsletter_signup`, `click_directions`, `horeca_lead`.
