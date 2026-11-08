@@ -431,3 +431,5 @@ html[data-q="g"] .no-t { display: none; }
 html[data-q="g"] #temporada-bloques { min-height: 1100px; }
 @media (min-width: 768px) { html[data-q="g"] #temporada-bloques { min-height: 640px; } }
 html[data-q="l"] #ritual-contexto, html[data-q="k"] #ritual-contexto { min-height: 104px; }
+#panel-cifras { min-height: 540px; } #panel-qr { min-height: 350px; } #panel-embudo { min-height: 212px; }
+@media (min-width: 900px) { #panel-cifras, #panel-qr { min-height: 170px; } }

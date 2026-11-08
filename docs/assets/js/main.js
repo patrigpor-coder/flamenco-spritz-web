@@ -116,7 +116,7 @@ export function bannerCookies(forzar = false) {
   b.setAttribute('aria-labelledby', 'cookies-titulo');
   b.innerHTML = `
     <h2 id="cookies-titulo">Cookies y analítica</h2>
-    <p>Guardamos en tu navegador lo necesario para que funcione la demo (edad, carrito y registros). Con tu permiso, mediríamos las visitas con Google Analytics 4. En este prototipo no se carga porque no hay un identificador real. <a href="${url('legal/cookies/')}">Más información</a>.</p>
+    <p>Guardamos en tu navegador lo necesario para que funcione la demo (edad, carrito y registros). Con tu permiso, mediríamos las visitas con Google Analytics 4. En este prototipo no se carga porque no hay un identificador real. <a href="${url('legal/cookies/')}">Política de cookies</a>.</p>
     <div class="opciones" hidden id="cookies-opciones">
       <label class="casilla"><input type="checkbox" checked disabled><span>Necesarias para que funcione la web (siempre activas).</span></label>
       <label class="casilla"><input type="checkbox" id="cookies-analitica" ${previo?.analitica ? 'checked' : ''}><span>Analítica (GA4), con datos agregados.</span></label>
