@@ -6,8 +6,8 @@ SELLO,sello.png,Medallón dorado con el flamenco (sin texto),Propia (equipo),,,,
 P01,p01_original_frontal.png,"Botella Original de frente, fondo transparente",Render del equipo,,,,no,,Imagen ilustrativa del producto
 P02,p02_original_tres_cuartos.png,Botella Original en tres cuartos (opcional),Render propio,,,,no,,Imagen ilustrativa del producto
 P03,p03_original_relieve.jpg,Primer plano del relieve sobre el vidrio (opcional),Render propio,,,,no,,Imagen ilustrativa del producto
-P04,p04_navidad_botella_caja.png,Botella de 50 cl con su caja,Render propio,,,,no,,Imagen ilustrativa del producto
-P05,p05_navidad_mesa.jpg,Mesa de diciembre con adultos,,,,,,,Imagen ilustrativa
+P04,p04_navidad_botella_caja.png,Botella de 50 cl con su caja,Render propio,propia (equipo con IA),Equipo,,no,no aplica,Imagen ilustrativa del producto
+P05,p05_navidad_mesa.jpg,Mesa de diciembre con adultos,propia (equipo con IA),Equipo,,no,,,Imagen ilustrativa
 K01,k01_kit.jpg,"Copa de balón, posavasos y caja kraft",,,,,no,,
 K02,k02_copa_hielo.jpg,Copa de balón con hielo y spritz blanco,,,,,no,,Imagen ilustrativa
 K03,k03_camiseta.png,"Camiseta del premio, delante y detrás",Propia (equipo),,,,no,,Imagen ilustrativa
