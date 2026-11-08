@@ -98,7 +98,7 @@ export function iniciarCaptacion(raiz = document) {
       salida.setAttribute('role', 'status');
       salida.setAttribute('tabindex', '-1');
       const contenido = form.dataset.contenido ? document.getElementById(form.dataset.contenido) : null;
-      salida.innerHTML = `<div class="aviso aviso--exito"><p><strong>${tipo === 'iman' ? 'Desbloqueado.' : 'Casi está.'}</strong> ${esc(form.dataset.exito || '')}</p><p class="pequeno">${AVISO_DEMO_FORM}</p></div>`
+      salida.innerHTML = `<div class="aviso aviso--exito"><p><strong>${tipo === 'iman' ? 'Listo.' : 'Casi está.'}</strong> ${esc(form.dataset.exito || '')}</p><p class="pequeno">${AVISO_DEMO_FORM}</p></div>`
         + (comunicaciones ? bloqueDobleAceptacion(d.email, origen) : '');
       form.replaceWith(salida);
       if (contenido) { contenido.hidden = false; contenido.classList.add('desbloqueado'); }
@@ -108,7 +108,7 @@ export function iniciarCaptacion(raiz = document) {
 }
 
 /** Mismo formulario de captación que la plantilla estática, para crearlo desde JS. */
-export function htmlCaptacion({ id, tipo = 'iman', iman = '', origen = '', boton = 'Desbloquear', exito = '', contenido = '' }) {
+export function htmlCaptacion({ id, tipo = 'iman', iman = '', origen = '', boton = 'Enviar', exito = '', contenido = '' }) {
   const obligatoria = tipo === 'newsletter'
     ? `Quiero recibir la newsletter de Flamenco Spritz (comunicaciones comerciales) y acepto la <a href="${url('legal/privacidad/')}">política de privacidad</a>. Te pediremos que lo confirmes. <span class="suave">(Obligatoria para suscribirte)</span>`
     : `Quiero recibir este contenido en mi correo y acepto la <a href="${url('legal/privacidad/')}">política de privacidad</a>. <span class="suave">(Obligatoria)</span>`;

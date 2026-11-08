@@ -22,9 +22,9 @@ Web publicada: `https://patrigpor-coder.github.io/flamenco-spritz-web/` (carpeta
 | 1 | `/rituales/` | La copa, el hielo y el gesto | Principal |
 | 1 | `/momentos/` | Tardeo en cuatro estaciones y «Desbloquea tu barrio» | Pie y menú móvil |
 | 1 | `/donde-encontrarlo/` | Localizador | Principal |
-| 1 | `/eventos/` | Prelanzamiento | Principal |
+| 1 | `/eventos/` | Prelanzamiento y «Prueba tu suerte» (sorteo de Villa Flamenco) | Principal |
 | 2 | `/eventos/inscripcion/` | Formulario por ciudad | No |
-| 2 | `/eventos/confirmacion/` | «Tu llave» | No (desde el correo) |
+| 2 | `/eventos/confirmacion/` | «Tu entrada» | No (desde el correo) |
 | 1 | `/festivales/` | Los tres festivales | Pie y menú móvil |
 | 1 | `/tardeos/` | Tardeos de invierno | Pie y menú móvil |
 | 1 | `/tienda/` | Catálogo | Principal |
@@ -47,7 +47,7 @@ Web publicada: `https://patrigpor-coder.github.io/flamenco-spritz-web/` (carpeta
 | 1 | `/consumo-responsable/` | Consumo responsable | Pie |
 | 1 | `/prensa/` | Prensa | Pie |
 | 1 | `/creditos/` | Créditos de las fotos | Pie |
-| 2 | `/legal/aviso-legal/` … `/legal/bases-pulsador-villa-flamenco/` | Seis páginas legales (borrador académico) | Pie |
+| 2 | `/legal/aviso-legal/` … `/legal/bases-sorteo-villa-flamenco/` | Seis páginas legales (borrador académico). `/legal/bases-pulsador-villa-flamenco/` redirige a las bases del sorteo | Pie |
 | QR | `/q/desbloquea/` | Festivales: barra, botella gigante, vaso | No |
 | QR | `/q/ritual/` | Vaso y posavasos de locales; copa y caja del kit | No |
 | QR | `/q/comunidad/` | Rincón y cabina 360 | No |

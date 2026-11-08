@@ -8,7 +8,7 @@ Qué cumple el prototipo, con qué norma y dónde se ve. **No es asesoramiento j
 
 - En la venta a distancia, la información obligatoria debe estar disponible antes de comprar. La ficha de compra muestra denominación, formato, graduación (4,5 % vol.) y precio.
 - **Ingredientes y alérgenos: [PENDIENTE].** Para bebidas de más de 1,2 % vol. hay régimen específico de ingredientes; verificar qué se exige a una bebida a base de vino y cómo se publica (verificar).
-- Denominación: «Bebida refrescante a base de vino» (anexo del encargo). La palabra «refrescante» solo aparece ahí, nunca como argumento.
+- Denominación: «Bebida aromatizada a base de vino», según el [Reglamento (UE) 251/2014](https://eur-lex.europa.eu/eli/reg/2014/251/oj), que exige que el vino sea al menos el 50 % del volumen. **Pendiente de validar con la receta.**
 
 ## Reglamento (CE) 1924/2006, declaraciones nutricionales y de propiedades saludables (art. 4.3)
 
@@ -17,16 +17,18 @@ Qué cumple el prototipo, con qué norma y dónde se ve. **No es asesoramiento j
 - Las bebidas con más de 1,2 % vol. no pueden llevar declaraciones de propiedades saludables. La web no las hace: ni «sin resaca», ni beneficios, ni azúcar, ni calorías.
 - El texto del ajo negro («no pica ni repite; es dulce y balsámico») describe el sabor, no la salud.
 
-## Código de autorregulación publicitaria del vino (actualización de 2026)
+## Código de autorregulación publicitaria del vino (OIVE, actualización de 2026)
 
-Federación Española del Vino: [fev.es](https://www.fev.es) · Texto de la actualización de 2026: [PENDIENTE: enlace y artículos concretos].
+Organización Interprofesional del Vino de España y Federación Española del Vino: [fev.es](https://www.fev.es) · Texto de la actualización de 2026: [PENDIENTE: enlace y artículos concretos].
+
+- **Logo de Wine in Moderation.** El código OIVE 2026 exige el logo de Wine in Moderation en las piezas visuales, y solo pueden usarlo los operadores adheridos al programa. El equipo del TFM no es un operador adherido, así que **el prototipo no lleva el logo**. En la web real, una vez que la bodega esté adherida, irá en las piezas visuales junto al mensaje de moderación.
 
 Lo que aplica la web, según los principios habituales de estos códigos (verificar con el texto de 2026):
 
 - Dirigida a mayores de edad: verificación de edad con fecha de nacimiento a la entrada.
 - Mensaje de moderación en todas las páginas, en el pie y junto a cada imagen de producto.
 - Sin asociar el consumo a éxito social o sexual, desinhibición, conducción o deporte; sin consumo en cadena (las rutas premian descubrir el local, no beber).
-- Personas en fotos: mayores de 25 aparentes; en fotos de banco, sin caras reconocibles.
+- Personas en fotos: nadie que aparente menos de 25 años. **Es un criterio propio del equipo, más exigente que el código del vino.** En las fotos de bancos de imágenes, además, sin caras reconocibles.
 - La graduación solo como información, nunca como argumento ni comparada.
 - Sin descuentos ni urgencias agresivas; «Primero los nuestros» es acceso anticipado sin descuento.
 - Nunca producto como premio ni bebida gratis.
@@ -55,11 +57,12 @@ Lo que aplica la web, según los principios habituales de estos códigos (verifi
 
 [BOE-A-2022-11589](https://www.boe.es/buscar/act.php?id=BOE-A-2022-11589)
 
-- La noche en Villa Flamenco exige 21 años; el resto, 18. Es una decisión del equipo, justificada en las bases (/legal/bases-pulsador-villa-flamenco/) con el art. 4.2 (diferencia de trato justificada por una finalidad legítima, adecuada, necesaria y proporcionada) y el art. 17 (acceso a bienes y servicios). Medida proporcionada: nadie queda fuera del juego; con 18-20 años el premio es la camiseta.
+- El sorteo de una noche en Villa Flamenco (eventos de prelanzamiento, una por ciudad) exige 21 años; el resto, 18. Es una decisión del equipo, justificada en las bases (/legal/bases-sorteo-villa-flamenco/) con el art. 4.2 (diferencia de trato justificada por una finalidad legítima, adecuada, necesaria y proporcionada) y el art. 17 (acceso a bienes y servicios). Medida proporcionada: con 18 a 20 años te inscribes en el evento igual; solo quedas fuera del sorteo.
 
 ## Venta a distancia de alcohol: España y Andalucía
 
 - **Consumidores:** Texto Refundido de la Ley General para la Defensa de los Consumidores y Usuarios (RDL 1/2007), información previa y desistimiento de 14 días (art. 102 y ss.). [BOE-A-2007-20555](https://www.boe.es/buscar/act.php?id=BOE-A-2007-20555)
+- **Horario:** por normativa andaluza no se vende ni se entrega alcohol entre las 22:00 y las 8:00. El checkout no admite pedidos en esa franja (hora de Madrid), muestra el aviso y conserva el carrito; /envios/, el seguimiento y las condiciones de venta dicen que las entregas son de 8:00 a 22:00. En modo demostración, una casilla simula que son las 23:00 (`horario_venta` en `config.json`). [PENDIENTE: artículo exacto de la norma andaluza.]
 - **Menores:** prohibición de venta a menores de 18 años. La web verifica la edad tres veces: al entrar, al comprar (fecha de nacimiento; el checkout se bloquea con menos de 18) y en la entrega (DNI; si no, el pedido vuelve a bodega). En los regalos, quien compra confirma que quien recibe es mayor de 18 y enseñará su DNI.
 - **Andalucía:** Ley 4/1997, de prevención y asistencia en materia de drogas, y sus modificaciones, con las limitaciones a la venta y el consumo de alcohol a menores [PENDIENTE: artículo exacto y enlace oficial; verificar si hay normas específicas de venta a distancia].
 - **Normativa estatal sobre alcohol y menores:** comprobar si en 2026-2027 hay ley estatal aprobada y sus obligaciones para la venta online (verificar).

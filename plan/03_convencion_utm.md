@@ -15,7 +15,7 @@ Convención del plan digital aplicada a todos los QR y enlaces de Flamenco Sprit
 | Valor | Cuándo |
 | --- | --- |
 | `qr` | Cualquier QR impreso o proyectado |
-| `instagram`, `tiktok` | Anuncios en esas redes |
+| `instagram` | Anuncios en Instagram |
 | `inf01` … `inf06` | Enlaces de los microinfluencers INF01 a INF06 (en minúsculas) |
 
 ## utm_medium

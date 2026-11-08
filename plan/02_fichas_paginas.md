@@ -9,7 +9,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Orientar en 3 segundos: tomarlo cerca o comprarlo |
 | Etapa del embudo | Experiencia y prueba |
 | Territorio | Los cuatro |
-| Bloques (en orden) | Portada con foto de momento y claim · «Qué abre la llave» (4 puertas) · La botella · 1.188 m · Próximo evento (o Navidad en temporada, leído de eventos.json / config.json) · Newsletter |
+| Bloques (en orden) | Portada con foto de momento y claim · «Cuatro maneras de conocerlo» (origen, ritual, momento y eventos) · La botella · 1.188 m · Próximo evento (o Navidad en temporada, leído de eventos.json / config.json) · Newsletter |
 | Llamada principal | Dónde tomarlo cerca |
 | Llamada secundaria | Comprar |
 | Microconversión | Clic al localizador o a la tienda; alta en newsletter |
@@ -25,7 +25,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Etapa del embudo | Todas |
 | Territorio | — |
 | Bloques (en orden) | Logo completo · fecha de nacimiento (día, mes, año) · página neutra sin producto |
-| Llamada principal | Desbloquear |
+| Llamada principal | Entrar |
 | Llamada secundaria | — |
 | Microconversión | Superar la verificación |
 | Evento GA4 | age_gate_pass |
@@ -69,7 +69,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Dar razones de origen con datos verificados |
 | Etapa del embudo | Experiencia y prueba |
 | Territorio | Origen |
-| Bloques (en orden) | Cifra 1.188 con sello · finca e IGP · 180 ha · altitud y suelo · bodega DOP Granada (el producto no es DOP/IGP) · línea de tiempo (romanos, Al-Munya, 1845-1850, hoy, 2027) |
+| Bloques (en orden) | Cifra 1.188 con sello · finca e IGP · 189 ha · altitud y suelo · bodega DOP Granada (el producto no es DOP/IGP) · línea de tiempo (romanos, Al-Munya, 1845-1850, hoy, 2027) |
 | Llamada principal | Dónde tomarlo |
 | Llamada secundaria | La Original |
 | Microconversión | Clic al localizador |
@@ -85,7 +85,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Etapa del embudo | Experiencia y prueba |
 | Territorio | Ritual |
 | Bloques (en orden) | Copa · hielo · gesto · combinaciones raras · guía de servicio |
-| Llamada principal | Desbloquear la guía |
+| Llamada principal | Recibir la guía |
 | Llamada secundaria | Dónde tomarlo |
 | Microconversión | Ir a /q/ritual/ y dejar el correo |
 | Evento GA4 | — |
@@ -100,8 +100,8 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Etapa del embudo | Fidelización |
 | Territorio | Momento |
 | Bloques (en orden) | Cuatro estaciones · calendario de tardeo (imán) · «Desbloquea tu barrio» con sello y rutas de ejemplo · mapa de tu barrio (imán) |
-| Llamada principal | Desbloquear el calendario |
-| Llamada secundaria | Desbloquear el mapa |
+| Llamada principal | Recibir el calendario |
+| Llamada secundaria | Recibir el mapa |
 | Microconversión | Correo a cambio del imán |
 | Evento GA4 | guide_download (calendario-tardeo, mapa-barrio), click_directions |
 | Palabra clave | — |
@@ -129,13 +129,13 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Llenar 500 plazas y 500 en lista de espera |
 | Etapa del embudo | Prelanzamiento |
 | Territorio | Activaciones |
-| Bloques (en orden) | Tarjeta por ciudad con plazas que bajan · cómo funciona (4 pasos) · cartel |
+| Bloques (en orden) | Tarjeta por ciudad con plazas que bajan y estado del sorteo · cómo funciona (4 pasos) · cartel · «Prueba tu suerte»: sorteo de una noche en Villa Flamenco por ciudad (botón «Simular sorteo» en la demo) |
 | Llamada principal | Reservar plaza |
 | Llamada secundaria | Lista de espera |
 | Microconversión | Inscripción |
 | Evento GA4 | qr_landing_view (qr1), event_signup |
 | Palabra clave | — |
-| Fotos | C01, C02, C03, CART (opcional) |
+| Fotos | C01, C02, C03, V01, CART (opcional) |
 
 ## `/eventos/inscripcion/`
 
@@ -144,11 +144,11 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Registrar y reservar plaza |
 | Etapa del embudo | Prelanzamiento |
 | Territorio | Activaciones |
-| Bloques (en orden) | Ciudad con plazas · campos comunes · dos casillas · resultado (reserva + correo «Confirmar» / lista de espera + liberar plaza en demo) |
+| Bloques (en orden) | Ciudad con plazas · campos comunes · dos casillas · resultado: «Estás en el sorteo de una noche en Villa Flamenco» (100 primeras, 21+) + reserva y correo «Confirmar» / lista de espera + liberar plaza en demo |
 | Llamada principal | Reservar plaza |
 | Llamada secundaria | Volver a eventos |
 | Microconversión | Inscripción o lista de espera |
-| Evento GA4 | event_signup, event_waitlist, newsletter_signup |
+| Evento GA4 | event_signup, event_waitlist, raffle_entry, newsletter_signup |
 | Palabra clave | — |
 | Fotos | — |
 
@@ -159,7 +159,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Entregar la entrada |
 | Etapa del embudo | Prelanzamiento |
 | Territorio | Activaciones |
-| Bloques (en orden) | «Tu llave»: sello, ciudad, QR único, código, aviso DNI |
+| Bloques (en orden) | «Tu entrada»: sello, ciudad, QR único, código, aviso DNI y, si toca, «Estás en el sorteo» |
 | Llamada principal | Dónde tomarlo |
 | Llamada secundaria | Tienda |
 | Microconversión | Confirmación en 48 h |
@@ -174,13 +174,13 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Explicar el stand y la mecánica |
 | Etapa del embudo | Experiencia y prueba |
 | Territorio | Activaciones |
-| Bloques (en orden) | Stand (F02, IA) · fechas [PENDIENTE] · las 100 primeras y kit · pulsador y camiseta · Villa Flamenco (21+) · rincón y cabina |
+| Bloques (en orden) | Stand (F02, IA) · fechas [PENDIENTE] · las 100 primeras y kit · camiseta (entrega [PENDIENTE]) · rincón y cabina |
 | Llamada principal | Dónde tomarlo |
 | Llamada secundaria | Tienda |
 | Microconversión | — |
 | Evento GA4 | — |
 | Palabra clave | — |
-| Fotos | F02, K01 (→K02), K03, V01, F01 |
+| Fotos | F02, K01 (→K02), K03, F01 |
 
 ## `/tardeos/`
 
@@ -189,13 +189,13 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Explicar los tardeos de invierno |
 | Etapa del embudo | Fidelización |
 | Territorio | Momento y Activaciones |
-| Bloques (en orden) | Nueve tardeos por ciudad (fechas [PENDIENTE]) · cómo funciona · camiseta |
+| Bloques (en orden) | Nueve tardeos por ciudad (fechas [PENDIENTE]) · cómo funciona: las 20 primeras y el kit |
 | Llamada principal | Dónde tomarlo |
 | Llamada secundaria | Tienda |
 | Microconversión | — |
 | Evento GA4 | — |
 | Palabra clave | — |
-| Fotos | M02, K03 |
+| Fotos | M02, K01 (→K02) |
 
 ## `/q/desbloquea/`
 
@@ -204,13 +204,13 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Registrar en el festival y entregar el kit |
 | Etapa del embudo | Experiencia y prueba |
 | Territorio | Activaciones |
-| Bloques (en orden) | Contexto del QR · kit · módulo Desbloqueo (paso 1, tarjeta con sello, correo de bienvenida) · pulsador · enlaces |
-| Llamada principal | Desbloquear |
-| Llamada secundaria | Pulsador |
-| Microconversión | Registro (100 primeras) e intento |
-| Evento GA4 | qr_landing_view, unlock_code_issued, unlock_sold_out, button_game_try, button_game_win |
+| Bloques (en orden) | Contexto del QR · kit · registro de las 100 primeras (tarjeta «Kit nº X de 100» con sello, correo de bienvenida) · enlaces |
+| Llamada principal | Registrarme |
+| Llamada secundaria | Dónde tomarlo |
+| Microconversión | Registro (100 primeras) |
+| Evento GA4 | qr_landing_view, unlock_code_issued, unlock_sold_out |
 | Palabra clave | — |
-| Fotos | K01 (→K02), K03, V01, SELLO |
+| Fotos | K01 (→K02), SELLO |
 
 ## `/q/temporada/`
 
@@ -219,11 +219,11 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Cambiar el contenido sin reimprimir el QR |
 | Etapa del embudo | Fidelización / compra |
 | Territorio | Momento |
-| Bloques (en orden) | ?t= tardeo + Desbloqueo (20 primeras) · ?g= tienda gourmet (Navidad o la Original) · sin parámetros: temporada de config.json |
-| Llamada principal | Desbloquear / Comprar online |
+| Bloques (en orden) | ?t= tardeo + registro de las 20 primeras (kit) · ?g= tienda gourmet (Navidad o la Original) · sin parámetros: temporada de config.json |
+| Llamada principal | Registrarme / Comprar online |
 | Llamada secundaria | Localizador |
 | Microconversión | Registro o compra |
-| Evento GA4 | season_page_view, unlock_code_issued, button_game_try |
+| Evento GA4 | season_page_view, unlock_code_issued |
 | Palabra clave | — |
 | Fotos | M02, P04, P01, K03, SELLO |
 
@@ -235,7 +235,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Etapa del embudo | Fidelización |
 | Territorio | Ritual |
 | Bloques (en orden) | Contexto (?l= local / ?k= kit con segundo ritual) · tres pasos · guía de servicio y calendario a cambio del correo |
-| Llamada principal | Desbloquear la guía |
+| Llamada principal | Recibir la guía |
 | Llamada secundaria | Localizador / tienda |
 | Microconversión | Correo |
 | Evento GA4 | guide_download (guia-servicio) |
@@ -249,7 +249,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Seguir la cuenta y compartir con permiso |
 | Etapa del embudo | Prescripción |
 | Territorio | Activaciones |
-| Bloques (en orden) | Redes [PENDIENTE] · hashtags · ?s=cabina: vídeo con casilla de reutilización (sin premio) |
+| Bloques (en orden) | Instagram y canal de difusión [PENDIENTE] · hashtags · ?s=cabina: vídeo con casilla de reutilización (sin premio) |
 | Llamada principal | Enviarme el vídeo |
 | Llamada secundaria | Localizador / tienda |
 | Microconversión | Seguir o compartir |
@@ -324,7 +324,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Cerrar la compra en 3 pasos |
 | Etapa del embudo | Lanzamiento y compra |
 | Territorio | — |
-| Bloques (en orden) | Progreso · 1 datos y edad · 2 envío y regalo · 3 pasarela simulada · resumen siempre visible |
+| Bloques (en orden) | Progreso · 1 datos y edad · 2 envío y regalo · 3 pasarela simulada · resumen siempre visible · bloqueo de 22:00 a 8:00 con el carrito conservado (y casilla de simulación en la demo) |
 | Llamada principal | Continuar / Simular pago |
 | Llamada secundaria | Volver |
 | Microconversión | Compra simulada |
@@ -354,7 +354,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Mostrar el envío hasta la entrega |
 | Etapa del embudo | Fidelización |
 | Territorio | Ritual |
-| Bloques (en orden) | Cinco estados · aviso DNI en reparto · ritual y próximo tardeo al entregar |
+| Bloques (en orden) | Cinco estados · entregas de 8:00 a 22:00 · aviso DNI en reparto · ritual y próximo tardeo al entregar |
 | Llamada principal | Avanzar estado (demo) |
 | Llamada secundaria | Prueba un ritual |
 | Microconversión | Correo para el próximo tardeo |
@@ -369,7 +369,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Explicar plazos, embalaje y verificación de edad |
 | Etapa del embudo | Lanzamiento y compra |
 | Territorio | — |
-| Bloques (en orden) | Plazo · zonas y gastos [PENDIENTE] · embalaje · DNI en la entrega · fechas de Navidad |
+| Bloques (en orden) | Plazo · horario de pedidos y entregas (8:00 a 22:00) · zonas y gastos [PENDIENTE] · embalaje · DNI en la entrega · fechas de Navidad |
 | Llamada principal | Ir a la tienda |
 | Llamada secundaria | Seguir un pedido |
 | Microconversión | — |
@@ -401,7 +401,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Territorio | Ritual y Momento |
 | Bloques (en orden) | Seis artículos · calendario de tardeo (imán) |
 | Llamada principal | Leer |
-| Llamada secundaria | Desbloquear calendario |
+| Llamada secundaria | Recibir el calendario |
 | Microconversión | Correo |
 | Evento GA4 | guide_download |
 | Palabra clave | — |
@@ -504,7 +504,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Newsletter, canal y hashtags |
 | Etapa del embudo | Fidelización / prescripción |
 | Territorio | Activaciones |
-| Bloques (en orden) | Newsletter · redes [PENDIENTE] · hashtags |
+| Bloques (en orden) | Newsletter · Instagram y canal de difusión [PENDIENTE] · hashtags |
 | Llamada principal | Suscribirme |
 | Llamada secundaria | — |
 | Microconversión | Alta en newsletter |
@@ -564,7 +564,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Cumplimiento (borrador académico) |
 | Etapa del embudo | Todas |
 | Territorio | — |
-| Bloques (en orden) | Aviso legal · privacidad · cookies · condiciones de venta · bases 100 primeras · bases pulsador y Villa Flamenco |
+| Bloques (en orden) | Aviso legal · privacidad · cookies · condiciones de venta · bases 100 primeras · bases del sorteo de Villa Flamenco (la dirección antigua de las bases del pulsador redirige aquí) |
 | Llamada principal | — |
 | Llamada secundaria | — |
 | Microconversión | — |

@@ -1,4 +1,4 @@
-import { $, $$, params, cargarConfig, guardarContacto, track, url, esc, correoSimulado, codigoAleatorio, ICONOS, AVISO_DEMO_FORM } from '../nucleo.js';
+import { $, $$, params, cargarConfig, guardarContacto, track, url, esc, correoSimulado, codigoAleatorio, ICONOS, AVISO_DEMO_FORM, edadDesde } from '../nucleo.js';
 import { validar, activarValidacionEnVivo, datosFormulario, bloqueDobleAceptacion } from '../formularios.js';
 import { estadoCiudades, leerInscripciones, guardarInscripciones, OCUPA } from '../eventos-datos.js';
 
@@ -28,6 +28,13 @@ function pantallaReservada(c, r, liberada = false) {
   </div>`;
 }
 
+const topeSorteo = (config.modo_demostracion ? config.topes_demo : config.topes).sorteo_villa_primeras;
+function avisoSorteo(r) {
+  if (r.sorteo === 'si') return `<div class="aviso aviso--exito"><p><strong>Estás en el sorteo de una noche en Villa Flamenco.</strong> Eres la inscripción nº ${r.orden} de esta ciudad. Si ganas, vas con un acompañante mayor de edad.${config.modo_demostracion ? ` <span class="marca-demo">Demo: sorteo entre las ${topeSorteo} primeras; en real, las 100 primeras</span>` : ''}</p></div>`;
+  if (r.sorteo === 'menor21') return `<div class="aviso"><p>Estás entre las primeras inscripciones, pero para el sorteo de Villa Flamenco hay que tener ${config.edades.villa_flamenco} años o más. Tu plaza en el evento no cambia.</p></div>`;
+  return '';
+}
+
 function pantallaEspera(c, r) {
   return `<div class="desbloqueado">
     <div class="aviso"><p><strong>Estás en la lista de espera.</strong> ${esc(c.ciudad)} · ${esc(c.fecha_texto)}. Si se libera una plaza, te la ofrecemos por correo.</p><p class="pequeno">${AVISO_DEMO_FORM}</p></div>
@@ -48,15 +55,21 @@ form.addEventListener('submit', async (ev) => {
   let html = '';
   if (previo) {
     html = `<div class="aviso"><p><strong>Ya estabas inscrita o inscrito en ${esc(c.ciudad)}</strong> con este correo. Nadie se registra dos veces.</p></div>`
-      + (previo.estado === 'confirmada' ? `<a class="btn" href="${enlaceConfirmar(previo.codigo)}">Ver tu llave</a>` : previo.estado === 'reservada' ? pantallaReservada(c, previo) : pantallaEspera(c, previo));
+      + avisoSorteo(previo)
+      + (previo.estado === 'confirmada' ? `<a class="btn" href="${enlaceConfirmar(previo.codigo)}">Ver tu entrada</a>` : previo.estado === 'reservada' ? pantallaReservada(c, previo) : pantallaEspera(c, previo));
   } else {
-    const r = { email, codigo: `FS-${c.id.slice(0, 3).toUpperCase()}-${codigoAleatorio(6)}`, fecha: new Date().toISOString(), estado: c.libres > 0 ? 'reservada' : 'espera' };
+    // Orden de inscripción en la ciudad: las primeras (topes.sorteo_villa_primeras) con 21 años o más entran en el sorteo.
+    const orden = db[c.id].length + 1;
+    const edad = edadDesde(d.nacimiento);
+    const sorteo = orden > topeSorteo ? 'no' : edad >= config.edades.villa_flamenco ? 'si' : 'menor21';
+    const r = { email, codigo: `FS-${c.id.slice(0, 3).toUpperCase()}-${codigoAleatorio(6)}`, fecha: new Date().toISOString(), estado: c.libres > 0 ? 'reservada' : 'espera', orden, sorteo };
     db[c.id].push(r);
     guardarInscripciones(db);
     const comunicaciones = d.comunicaciones === 'si';
     guardarContacto({ email, nacimiento: d.nacimiento, cp: d.cp, conocias: d.conocias, accion: `evento:${c.id}`, comunicaciones });
-    if (r.estado === 'reservada') { track('event_signup', { ciudad: c.id }); html = pantallaReservada(c, r); }
-    else { track('event_waitlist', { ciudad: c.id }); html = pantallaEspera(c, r); }
+    if (sorteo === 'si') track('raffle_entry', { ciudad: c.id, orden });
+    if (r.estado === 'reservada') { track('event_signup', { ciudad: c.id }); html = avisoSorteo(r) + pantallaReservada(c, r); }
+    else { track('event_waitlist', { ciudad: c.id }); html = avisoSorteo(r) + pantallaEspera(c, r); }
     if (comunicaciones) html += bloqueDobleAceptacion(email, `evento_${c.id}`);
   }
   form.hidden = true;

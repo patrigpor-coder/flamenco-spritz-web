@@ -116,8 +116,10 @@ h1 em, h2 em, h3 em { font-style: italic; }
 .icono-btn svg { width: 24px; height: 24px; }
 .contador-carrito { position: absolute; top: 6px; right: 4px; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 10px; background: var(--iris); color: var(--lino); font-size: .6875rem; font-weight: 600; line-height: 20px; text-align: center; }
 .contador-carrito[data-vacio] { display: none; }
-.menu-movil { position: fixed; inset: 0; z-index: 60; background: var(--lino); padding: 16px var(--margen) 40px; overflow-y: auto; display: none; }
-.menu-movil.abierto { display: block; }
+/* El menú vive fuera de la cabecera: su backdrop-filter encerraría un position:fixed dentro de ella. */
+.menu-movil { position: fixed; inset: 0; z-index: 95; background: var(--lino); padding: 16px var(--margen) 40px; overflow-y: auto; overscroll-behavior: contain; display: block; }
+html.menu-abierto, html.menu-abierto body { overflow: hidden; }
+@media (min-width: 1024px) { .menu-movil { display: none; } }
 .menu-movil__cabeza { display: flex; justify-content: space-between; align-items: center; height: 64px; margin-bottom: 24px; }
 .menu-movil ul { list-style: none; padding: 0; margin: 0; }
 .menu-movil li a { display: block; font-family: var(--serif); font-size: 2.4rem; line-height: 1.25; color: var(--morado); text-decoration: none; padding: 6px 0; }
@@ -321,12 +323,12 @@ html.edad-pendiente body::before { content: ""; position: fixed; inset: 0; backg
 .linea-tiempo li.pendiente-paso { color: var(--texto-suave); }
 
 /* ---------- Entradas, desbloqueos ---------- */
-.llave { background: var(--blanco); border: 1px solid rgba(43,30,51,.12); padding: 28px 24px; text-align: center; max-width: 420px; margin: 0 auto; position: relative; }
-.llave::before { content: ""; position: absolute; inset: 8px; border: 1px solid var(--caramelo); pointer-events: none; }
-.llave .sello { margin: 0 auto 12px; width: max-content; }
-.llave .numero { font-family: var(--serif); font-size: clamp(3.5rem, 16vw, 5.5rem); line-height: 1; color: var(--iris); }
-.llave .qr-entrada { width: 200px; height: 200px; margin: 16px auto; }
-.llave .qr-entrada svg { width: 100%; height: 100%; }
+.tarjeta-codigo { background: var(--blanco); border: 1px solid rgba(43,30,51,.12); padding: 28px 24px; text-align: center; max-width: 420px; margin: 0 auto; position: relative; }
+.tarjeta-codigo::before { content: ""; position: absolute; inset: 8px; border: 1px solid var(--caramelo); pointer-events: none; }
+.tarjeta-codigo .sello { margin: 0 auto 12px; width: max-content; }
+.tarjeta-codigo .numero { font-family: var(--serif); font-size: clamp(3.5rem, 16vw, 5.5rem); line-height: 1; color: var(--iris); }
+.tarjeta-codigo .qr-entrada { width: 200px; height: 200px; margin: 16px auto; }
+.tarjeta-codigo .qr-entrada svg { width: 100%; height: 100%; }
 .codigo { font-family: ui-monospace, Menlo, monospace; letter-spacing: .08em; font-size: .9375rem; }
 
 .cronometro { font-family: var(--serif); font-size: clamp(4.5rem, 24vw, 9rem); line-height: 1; text-align: center; font-variant-numeric: tabular-nums; color: var(--iris); margin: 16px 0; }
