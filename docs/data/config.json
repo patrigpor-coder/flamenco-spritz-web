@@ -28,13 +28,21 @@
     "villa_flamenco": 21
   },
   "topes": {
-    "eventos": { "granada": 100, "malaga": 200, "sevilla": 200 },
+    "eventos": {
+      "granada": 100,
+      "malaga": 200,
+      "sevilla": 200
+    },
     "festival_primeras": 100,
     "tardeo_primeras": 20,
     "noches_villa_por_festival": 2
   },
   "topes_demo": {
-    "eventos": { "granada": 5, "malaga": 5, "sevilla": 5 },
+    "eventos": {
+      "granada": 5,
+      "malaga": 5,
+      "sevilla": 5
+    },
     "festival_primeras": 5,
     "tardeo_primeras": 5,
     "noches_villa_por_festival": 2
@@ -53,5 +61,13 @@
   "envio": {
     "plazo": "24 a 48 horas desde la bodega",
     "gastos_demo": 0
+  },
+  "horario_venta": {
+    "_nota": "Por normativa andaluza no se vende ni se entrega alcohol entre las 22:00 y las 8:00. Fuera de ese horario el checkout no admite pedidos y conserva el carrito.",
+    "zona_horaria": "Europe/Madrid",
+    "desde": "08:00",
+    "hasta": "22:00",
+    "_simular": "Solo en modo demostración: true simula que es de noche (también se puede activar con la casilla del carrito o del checkout).",
+    "simular_fuera_de_horario": false
   }
 }

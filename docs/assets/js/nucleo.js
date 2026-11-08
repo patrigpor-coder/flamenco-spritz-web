@@ -88,6 +88,36 @@ export async function navidadComprable() {
   return e === 'abierta' || e === 'reyes' || (e === 'primeros' && accesoAnticipado());
 }
 
+// ---------- Horario de venta y entrega (normativa andaluza: nada entre 22:00 y 8:00) ----------
+export const AVISO_HORARIO = 'Por normativa andaluza no vendemos ni entregamos alcohol entre las 22:00 y las 8:00';
+export function horaMadrid(fecha = new Date(), zona = 'Europe/Madrid') {
+  const [h, m] = new Intl.DateTimeFormat('es-ES', { timeZone: zona, hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(fecha).split(':').map(Number);
+  return h * 60 + m;
+}
+export async function simulandoNoche() {
+  const c = await cargarConfig();
+  if (!c.modo_demostracion) return false;
+  const s = leer('fs_simular_horario', null, sessionStorage);
+  return s === null ? !!c.horario_venta?.simular_fuera_de_horario : s;
+}
+export async function fueraDeHorario() {
+  const c = await cargarConfig();
+  if (await simulandoNoche()) return true;
+  const h = c.horario_venta || { zona_horaria: 'Europe/Madrid', desde: '08:00', hasta: '22:00' };
+  const min = (t) => { const [a, b] = t.split(':').map(Number); return a * 60 + b; };
+  const ahora = horaMadrid(new Date(), h.zona_horaria);
+  return ahora < min(h.desde) || ahora >= min(h.hasta);
+}
+/** Casilla de demostración «Simular que son las 23:00»; llama a alCambiar(fuera) cuando cambia. */
+export async function iniciarSimuladorHorario(alCambiar) {
+  const casilla = document.querySelector('[data-simular-horario]');
+  if (casilla) {
+    casilla.checked = await simulandoNoche();
+    casilla.addEventListener('change', async () => { guardar('fs_simular_horario', casilla.checked, sessionStorage); alCambiar(await fueraDeHorario()); });
+  }
+  alCambiar(await fueraDeHorario());
+}
+
 // ---------- Temporada (para /q/temporada/ y el inicio) ----------
 export async function temporada() {
   const c = await cargarConfig();

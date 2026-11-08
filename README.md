@@ -78,6 +78,7 @@ Abre http://localhost:8080/docs/ (o sirve la carpeta padre con un enlace `flamen
 | `navidad.estado` | `auto` (por fecha) o `aviso`, `primeros`, `abierta`, `reyes`, `cerrada` |
 | `topes` / `topes_demo` | Plazas por ciudad, primeras de festival (100) y de tardeo (20), noches de Villa Flamenco por festival (2) |
 | `pulsador` | Objetivo (5,00 s), precisión (0,01 s = a la centésima), intentos por día |
+| `horario_venta` | Horario de pedidos y entregas (8:00 a 22:00, hora de Madrid). `simular_fuera_de_horario: true` simula la noche en la demo; también hay una casilla en el carrito y en el checkout |
 | `ga4_id` | ID de GA4. Con `G-XXXXXXX` no se carga nada |
 
 ## Contador compartido entre móviles: qué hemos elegido

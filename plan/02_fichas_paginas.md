@@ -249,7 +249,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Seguir la cuenta y compartir con permiso |
 | Etapa del embudo | Prescripción |
 | Territorio | Activaciones |
-| Bloques (en orden) | Redes [PENDIENTE] · hashtags · ?s=cabina: vídeo con casilla de reutilización (sin premio) |
+| Bloques (en orden) | Instagram y canal de difusión [PENDIENTE] · hashtags · ?s=cabina: vídeo con casilla de reutilización (sin premio) |
 | Llamada principal | Enviarme el vídeo |
 | Llamada secundaria | Localizador / tienda |
 | Microconversión | Seguir o compartir |
@@ -324,7 +324,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Cerrar la compra en 3 pasos |
 | Etapa del embudo | Lanzamiento y compra |
 | Territorio | — |
-| Bloques (en orden) | Progreso · 1 datos y edad · 2 envío y regalo · 3 pasarela simulada · resumen siempre visible |
+| Bloques (en orden) | Progreso · 1 datos y edad · 2 envío y regalo · 3 pasarela simulada · resumen siempre visible · bloqueo de 22:00 a 8:00 con el carrito conservado (y casilla de simulación en la demo) |
 | Llamada principal | Continuar / Simular pago |
 | Llamada secundaria | Volver |
 | Microconversión | Compra simulada |
@@ -354,7 +354,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Mostrar el envío hasta la entrega |
 | Etapa del embudo | Fidelización |
 | Territorio | Ritual |
-| Bloques (en orden) | Cinco estados · aviso DNI en reparto · ritual y próximo tardeo al entregar |
+| Bloques (en orden) | Cinco estados · entregas de 8:00 a 22:00 · aviso DNI en reparto · ritual y próximo tardeo al entregar |
 | Llamada principal | Avanzar estado (demo) |
 | Llamada secundaria | Prueba un ritual |
 | Microconversión | Correo para el próximo tardeo |
@@ -369,7 +369,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Explicar plazos, embalaje y verificación de edad |
 | Etapa del embudo | Lanzamiento y compra |
 | Territorio | — |
-| Bloques (en orden) | Plazo · zonas y gastos [PENDIENTE] · embalaje · DNI en la entrega · fechas de Navidad |
+| Bloques (en orden) | Plazo · horario de pedidos y entregas (8:00 a 22:00) · zonas y gastos [PENDIENTE] · embalaje · DNI en la entrega · fechas de Navidad |
 | Llamada principal | Ir a la tienda |
 | Llamada secundaria | Seguir un pedido |
 | Microconversión | — |
@@ -504,7 +504,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Newsletter, canal y hashtags |
 | Etapa del embudo | Fidelización / prescripción |
 | Territorio | Activaciones |
-| Bloques (en orden) | Newsletter · redes [PENDIENTE] · hashtags |
+| Bloques (en orden) | Newsletter · Instagram y canal de difusión [PENDIENTE] · hashtags |
 | Llamada principal | Suscribirme |
 | Llamada secundaria | — |
 | Microconversión | Alta en newsletter |

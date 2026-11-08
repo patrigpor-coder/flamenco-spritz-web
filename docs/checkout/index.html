@@ -58,6 +58,8 @@
 <section class="contenedor" style="padding:32px var(--margen) var(--seccion)">
   <nav class="miga" aria-label="Estás en"><ol><li><a href="../">Inicio</a></li><li><a href="../carrito/">Carrito</a></li><li aria-current="page">Tramitar pedido</li></ol></nav>
   <h1 style="font-size:clamp(2.2rem,6vw,3.4rem)">Tramitar pedido</h1>
+  <div class="banda-demo" data-solo-demo style="margin:0 0 24px;text-align:left;padding:10px 14px"><label class="casilla" style="margin:0"><input type="checkbox" id="simular-horario" data-simular-horario><span><span class="marca-demo">Demostración</span> Simular que son las 23:00 (fuera del horario de venta)</span></label></div>
+  <div id="fuera-horario" hidden tabindex="-1" class="aviso aviso--error" role="alert"><p><strong>Por normativa andaluza no vendemos ni entregamos alcohol entre las 22:00 y las 8:00.</strong></p><p>Tu carrito se conserva: vuelve a partir de las 8:00 (hora de Madrid) para terminar el pedido.</p><p style="margin:0"><a href="../carrito/">Volver al carrito</a> · <a href="../donde-encontrarlo/">Dónde encontrarlo</a></p></div>
   <ol class="progreso" aria-label="Pasos del pedido">
     <li data-paso="1" aria-current="step">Datos y edad</li>
     <li data-paso="2">Envío</li>
@@ -90,7 +92,7 @@
           <label class="casilla"><input type="checkbox" id="ck-mayor" name="destinatario_mayor" value="si" required data-error="Confirma que quien recibe es mayor de 18 y enseñará su DNI."><span>Quien recibe es mayor de 18 y enseñará su DNI. <span class="suave">(Obligatoria)</span></span></label>
         </div>
         <fieldset class="campo"><legend>Método de entrega</legend>
-          <label class="radio-tarjeta" style="margin-top:8px"><input type="radio" name="entrega" value="domicilio" checked required><span><strong>A domicilio, desde la bodega</strong> · de 24 a 48 horas<br><span class="pequeno suave">Envío: pendiente de definir (0,00 € en la demostración). Transportista: <span class="pendiente">[PENDIENTE]</span></span></span></label>
+          <label class="radio-tarjeta" style="margin-top:8px"><input type="radio" name="entrega" value="domicilio" checked required><span><strong>A domicilio, desde la bodega</strong> · de 24 a 48 horas, con entrega de 8:00 a 22:00<br><span class="pequeno suave">Envío: pendiente de definir (0,00 € en la demostración). Transportista: <span class="pendiente">[PENDIENTE]</span></span></span></label>
         </fieldset>
         <div class="acciones"><button class="btn btn--sec" type="button" data-volver="1">Volver</button><button class="btn" type="submit">Continuar al pago <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button></div>
       </form>
