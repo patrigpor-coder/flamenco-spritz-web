@@ -173,6 +173,23 @@
     "etiqueta": "Imagen ilustrativa",
     "producto": false
   },
+  "C01": {
+    "base": "c01_granada",
+    "ancho": 1600,
+    "alto": 1200,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1600
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen generada con IA",
+    "producto": false
+  },
   "F02": {
     "base": "f02_stand_festival",
     "ancho": 1440,

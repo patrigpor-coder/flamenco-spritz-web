@@ -13,7 +13,6 @@ La tabla se regenera sola con `python3 scripts/procesar-fotos.py`. En la web, ca
 | O02 | `o02_bodega.jpg` | Interior de bodega | No subida | /origen/ |
 | O03 | `o03_uva_manos.jpg` | Racimo o vendimia a mano | No subida | /journal/spritz-flor-de-sauco/, /origen/ |
 | V01 | `v01_villa.jpg` | Casa rural entre viñedos | No subida | /eventos/ |
-| C01 | `c01_granada.jpg` | Granada | No subida | /donde-encontrarlo/, /eventos/ |
 | C02 | `c02_malaga.jpg` | Málaga | No subida | /donde-encontrarlo/, /eventos/ |
 | C03 | `c03_sevilla.jpg` | Sevilla | No subida | /donde-encontrarlo/, /eventos/ |
 | F01 | `f01_festival.jpg` | Público adulto en un festival | No subida | /festivales/ |
