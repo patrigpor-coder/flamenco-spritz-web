@@ -207,6 +207,23 @@
     "etiqueta": "Imagen ilustrativa",
     "producto": false
   },
+  "C03": {
+    "base": "c03_sevilla",
+    "ancho": 1600,
+    "alto": 1200,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1600
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa",
+    "producto": false
+  },
   "F02": {
     "base": "f02_stand_festival",
     "ancho": 1440,
