@@ -85,6 +85,23 @@
     "etiqueta": "Imagen generada con IA",
     "producto": false
   },
+  "K02": {
+    "base": "k02_copa_hielo",
+    "ancho": 1536,
+    "alto": 2752,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1536
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa",
+    "producto": false
+  },
   "K03": {
     "base": "k03_camiseta",
     "ancho": 1118,
@@ -116,6 +133,41 @@
     "avif": true,
     "transparente": false,
     "etiqueta": "Imagen generada con IA",
+    "producto": false
+  },
+  "M02": {
+    "base": "m02_tardeo_invierno",
+    "ancho": 1792,
+    "alto": 2400,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1600,
+      1792
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa",
+    "producto": false
+  },
+  "M03": {
+    "base": "m03_plan_pequeno",
+    "ancho": 1536,
+    "alto": 2752,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1536
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa",
     "producto": false
   },
   "F02": {

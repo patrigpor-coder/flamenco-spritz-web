@@ -9,10 +9,6 @@ La tabla se regenera sola con `python3 scripts/procesar-fotos.py`. En la web, ca
 <!--fotos-pendientes-->
 | ID | Archivo | Qué muestra | Motivo | Páginas con hueco |
 | --- | --- | --- | --- | --- |
-| K01 | `k01_kit.jpg` | Copa de balón, posavasos y caja kraft | No subida | /festivales/, /q/desbloquea/, /tardeos/ |
-| K02 | `k02_copa_hielo.jpg` | Copa de balón con hielo y spritz blanco | No subida | /journal/frizzante-o-spritz/, /journal/vino-blanco-con-hielo/, /q/ritual/, /rituales/ |
-| M02 | `m02_tardeo_invierno.jpg` | Interior de bar en invierno | No subida | /q/temporada/, /tardeos/ |
-| M03 | `m03_plan_pequeno.jpg` | Dos o tres amigos en una barra o plaza | No subida | /journal/del-rebujito-al-spritz/, /momentos/ |
 | O01 | `o01_vinedo_altura.jpg` | Viñedo de altura con montaña | No subida | /origen/, /spritz/ |
 | O02 | `o02_bodega.jpg` | Interior de bodega | No subida | /origen/ |
 | O03 | `o03_uva_manos.jpg` | Racimo o vendimia a mano | No subida | /journal/spritz-flor-de-sauco/, /origen/ |
