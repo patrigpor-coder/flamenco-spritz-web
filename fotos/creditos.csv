@@ -18,9 +18,9 @@ O01,o01_vinedo_altura.jpg,Viñedo de altura con montaña,,,,,no,,
 O02,o02_bodega.jpg,Interior de bodega,,,,,no,,
 O03,o03_uva_manos.jpg,Racimo o vendimia a mano,,,,,,,
 V01,v01_villa.jpg,Casa rural entre viñedos,,,,,no,,
-C01,c01_granada.jpg,Granada,,propia del equipo,equipo,,no,no aplica,Imagen generada con IA
-C02,c02_malaga.jpg,Málaga,,,,,no,,
-C03,c03_sevilla.jpg,Sevilla,,,,,no,,
+C01,c01_granada.jpg,Granada,,propia del equipo,equipo,,no,no aplica,
+C02,c02_malaga.jpg,Málaga,,propia del equipo,equipo,,no,no aplica,
+C03,c03_sevilla.jpg,Sevilla,,propia,TFM,,no,no aplica,
 F01,f01_festival.jpg,Público adulto en un festival,,,,,,,Imagen ilustrativa
 F02,f02_stand_festival.jpg,Recreación del stand de festival,"Propia (equipo, con IA)",,,,no (generadas con IA),,Imagen generada con IA
 G01,g01_tienda_gourmet.jpg,Estantería de tienda gourmet,,,,,no,,Imagen ilustrativa
