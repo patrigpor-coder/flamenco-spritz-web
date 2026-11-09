@@ -9,11 +9,15 @@ const producto = () => productos.find((p) => p.sku === skuActual());
 
 if (params.get('formato') === 'caja6') { const r = form.querySelector('input[value="FS-ORIG-CAJA6"]'); if (r) r.checked = true; }
 
-// Galería
-$$('[data-ver]').forEach((b) => b.addEventListener('click', () => {
-  $$('[data-galeria]').forEach((g) => (g.hidden = g.dataset.galeria !== b.dataset.ver));
-  $$('[data-ver]').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
-}));
+// Galería: miniaturas y, al elegir formato, la foto de ese formato (pack de 4 o caja de 6).
+const verFoto = (indice) => {
+  $$('[data-galeria]').forEach((g) => (g.hidden = g.dataset.galeria !== indice));
+  $$('[data-ver]').forEach((x) => x.setAttribute('aria-pressed', String(x.dataset.ver === indice)));
+};
+$$('[data-ver]').forEach((b) => b.addEventListener('click', () => verFoto(b.dataset.ver)));
+const fotoDelFormato = () => { const g = $(`[data-galeria][data-sku="${skuActual()}"]`); if (g) verFoto(g.dataset.galeria); };
+form.addEventListener('change', (ev) => { if (ev.target.name === 'sku') fotoDelFormato(); });
+fotoDelFormato();
 
 const pintarPrecio = () => {
   const n = Math.max(1, Math.min(99, parseInt(cant.value, 10) || 1));

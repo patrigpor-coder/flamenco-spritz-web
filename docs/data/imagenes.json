@@ -189,5 +189,39 @@
     "transparente": false,
     "etiqueta": "Imagen generada con IA",
     "producto": false
+  },
+  "P06": {
+    "base": "p06_pack4",
+    "ancho": 1536,
+    "alto": 2752,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1536
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa del producto",
+    "producto": true
+  },
+  "P07": {
+    "base": "p07_caja6",
+    "ancho": 1536,
+    "alto": 2752,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1536
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa del producto",
+    "producto": true
   }
 }

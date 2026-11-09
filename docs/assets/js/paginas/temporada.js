@@ -32,7 +32,7 @@ if (t) {
     $('#temporada-navidad').hidden = false;
   } else {
     h1.textContent = 'La Original, en esta tienda';
-    entr.textContent = 'Flor de saúco, en botella de 25 cl. Llévatela de aquí o pídela online.';
+    entr.textContent = 'Flor de saúco, en pack de 4 o caja de 6 botellas. Llévatela de aquí o pídela online.';
     $('#temporada-original').hidden = false;
   }
   track('season_page_view', { temporada: enNavidad ? 'navidad' : 'original', tienda: g });

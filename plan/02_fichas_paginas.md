@@ -270,7 +270,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Microconversión | Ir a ficha |
 | Evento GA4 | view_item_list |
 | Palabra clave | — |
-| Fotos | P01, P04 |
+| Fotos | P06 (pack de 4), P07 (caja de 6), P04 |
 
 ## `/tienda/original/`
 
@@ -279,13 +279,13 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Objetivo | Vender la Original |
 | Etapa del embudo | Lanzamiento y compra |
 | Territorio | — |
-| Bloques (en orden) | Galería · formato (botella o caja de 6) · cantidad · precio · aviso 18 · «Así llega a casa» |
+| Bloques (en orden) | Galería (pack de 4, caja de 6 y botella) · formato (pack de 4 o caja de 6) · cantidad · precio · aviso 18 · «Así llega a casa» |
 | Llamada principal | Añadir al carrito |
 | Llamada secundaria | Ver carrito |
 | Microconversión | Añadir al carrito |
 | Evento GA4 | view_item, add_to_cart |
 | Palabra clave | — |
-| Fotos | P01, P02, P03 |
+| Fotos | P06, P07, P01 |
 
 ## `/tienda/navidad/`
 
@@ -315,7 +315,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Microconversión | Iniciar checkout |
 | Evento GA4 | view_cart, remove_from_cart |
 | Palabra clave | — |
-| Fotos | P01 (miniatura) |
+| Fotos | P06, P07 y P04 (miniaturas) |
 
 ## `/checkout/`
 
@@ -330,7 +330,7 @@ Una ficha por página. Etapas del embudo del proyecto: prelanzamiento, experienc
 | Microconversión | Compra simulada |
 | Evento GA4 | begin_checkout, add_shipping_info, add_payment_info, purchase |
 | Palabra clave | — |
-| Fotos | P01 (miniatura) |
+| Fotos | P06, P07 y P04 (miniaturas) |
 
 ## `/pedido/confirmado/`
 

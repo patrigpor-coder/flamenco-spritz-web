@@ -51,6 +51,8 @@ SUSTITUTOS = {"P02": "P01", "P03": "P01", "K01": "K02"}
 OPCIONALES_SIN_HUECO = {"CART"}
 OPCIONALES = {"P02", "P03", "K01", "CART"}
 LOGOS = {"LOGO-C", "LOGO-R", "SIMBOLO"}
+# Fotos de producto: llevan «Imagen ilustrativa del producto» y el mensaje de moderación.
+FOTOS_PRODUCTO = {"P01", "P02", "P03", "P04", "P06", "P07"}
 
 
 def leer_creditos():
@@ -85,7 +87,7 @@ def etiqueta_de(c):
     i = c["id"]
     if i in LOGOS or i == "SELLO":
         return ""
-    if i.startswith("P0") and i in {"P01", "P02", "P03", "P04"}:
+    if i in FOTOS_PRODUCTO:
         return "Imagen ilustrativa del producto"
     fuente = c["fuente"].lower()
     if i in {"F02", "CART"} or "con ia" in fuente or "generada con ia" in c["etiqueta"].lower():
@@ -303,7 +305,7 @@ def main():
         else:
             datos = procesar_raster(c, origen)
         datos["etiqueta"] = etiqueta_de(c)
-        datos["producto"] = c["id"] in {"P01", "P02", "P03", "P04"}
+        datos["producto"] = c["id"] in FOTOS_PRODUCTO
         manifiesto[c["id"]] = datos
         print(f"  ✓ {c['id']:8} {c['archivo']}")
 

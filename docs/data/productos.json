@@ -2,18 +2,18 @@
   "moneda": "EUR",
   "productos": [
     {
-      "sku": "FS-ORIG-25",
-      "id": "original-botella",
+      "sku": "FS-ORIG-PACK4",
+      "id": "original-pack4",
       "nombre": "Flamenco Spritz Original",
-      "formato": "Botella de 25 cl",
-      "unidades": 1,
-      "precio": 4.50,
+      "formato": "Pack de 4 botellas de 25 cl",
+      "unidades": 4,
+      "precio": 18.0,
       "graduacion": "4,5 % vol.",
       "sabor": "Flor de saúco",
-      "imagen": "P01",
+      "imagen": "P06",
       "ficha": "tienda/original/",
       "disponibilidad": "siempre",
-      "descripcion": "Vino blanco moscatel Flamenco de Bodegas Muñana con agua carbonatada y flor de saúco. Botella de vidrio de 25 cl, con la marca en relieve y cierre de chapa."
+      "descripcion": "Cuatro botellas de vidrio de 25 cl de la Original, en su pack de cartón kraft: vino blanco moscatel Flamenco de Bodegas Muñana con agua carbonatada y flor de saúco."
     },
     {
       "sku": "FS-ORIG-CAJA6",
@@ -21,13 +21,13 @@
       "nombre": "Flamenco Spritz Original",
       "formato": "Caja de 6 botellas de 25 cl",
       "unidades": 6,
-      "precio": 27.00,
+      "precio": 27.0,
       "graduacion": "4,5 % vol.",
       "sabor": "Flor de saúco",
-      "imagen": "P01",
+      "imagen": "P07",
       "ficha": "tienda/original/",
       "disponibilidad": "siempre",
-      "nota_demo": "Supuesto de la demo: 6 × 4,50 €, sin descuento por volumen. El formato real de la caja está [PENDIENTE].",
+      "nota_demo": "Supuesto de la demo: mismo precio por botella que el pack de 4, sin descuento por volumen. El formato real de la caja está [PENDIENTE].",
       "descripcion": "Seis botellas de 25 cl de la Original."
     },
     {
@@ -36,7 +36,7 @@
       "nombre": "Flamenco Spritz Edición de Navidad",
       "formato": "Botella de 50 cl grabada, con caja",
       "unidades": 1,
-      "precio": 9.90,
+      "precio": 9.9,
       "graduacion": "4,5 % vol.",
       "sabor": "Ajo negro y miel de lavanda",
       "imagen": "P04",

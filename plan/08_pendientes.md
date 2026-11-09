@@ -30,7 +30,7 @@ Además, en `fotos/creditos.csv` faltan **autor, licencia y enlace** de todas la
 | Dato | Dónde aparece |
 | --- | --- |
 | Ingredientes y alérgenos de la Original y de la Edición de Navidad | /producto/, /tienda/original/, /tienda/navidad/ |
-| Formato real de la caja de 6 (la demo supone 6 × 4,50 € = 27,00 €, sin descuento) | /tienda/original/, `productos.json` |
+| Formato real del pack de 4 (18,00 € en la demo) y de la caja de 6 (27,00 €), sin descuento por volumen. Online no se venden botellas sueltas | /tienda/original/, `productos.json` |
 
 ## 3. Envíos y venta
 
