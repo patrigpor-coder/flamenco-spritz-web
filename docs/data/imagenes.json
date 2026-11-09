@@ -187,7 +187,24 @@
     ],
     "avif": true,
     "transparente": false,
-    "etiqueta": "Imagen generada con IA",
+    "etiqueta": "Imagen ilustrativa",
+    "producto": false
+  },
+  "C02": {
+    "base": "c02_malaga",
+    "ancho": 1600,
+    "alto": 1200,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1600
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen ilustrativa",
     "producto": false
   },
   "F02": {
