@@ -173,6 +173,23 @@
     "etiqueta": "Imagen ilustrativa",
     "producto": false
   },
+  "O02": {
+    "base": "o02_bodega",
+    "ancho": 1440,
+    "alto": 900,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1440
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "",
+    "producto": false
+  },
   "C01": {
     "base": "c01_granada",
     "ancho": 1600,
@@ -240,6 +257,24 @@
     "transparente": false,
     "etiqueta": "Imagen generada con IA",
     "producto": false
+  },
+  "G01": {
+    "base": "g01_tienda_gourmet",
+    "ancho": 2000,
+    "alto": 1342,
+    "anchos": [
+      320,
+      480,
+      640,
+      800,
+      1200,
+      1600,
+      2000
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "Imagen generada con IA",
+    "producto": true
   },
   "P06": {
     "base": "p06_pack4",

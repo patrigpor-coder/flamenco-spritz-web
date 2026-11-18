@@ -10,13 +10,16 @@ La tabla se regenera sola con `python3 scripts/procesar-fotos.py`. En la web, ca
 | ID | Archivo | Qué muestra | Motivo | Páginas con hueco |
 | --- | --- | --- | --- | --- |
 | O01 | `o01_vinedo_altura.jpg` | Viñedo de altura con montaña | No subida | /origen/, /spritz/ |
-| O02 | `o02_bodega.jpg` | Interior de bodega | No subida | /origen/ |
 | O03 | `o03_uva_manos.jpg` | Racimo o vendimia a mano | No subida | /journal/spritz-flor-de-sauco/, /origen/ |
 | V01 | `v01_villa.jpg` | Casa rural entre viñedos | No subida | /eventos/ |
 | F01 | `f01_festival.jpg` | Público adulto en un festival | No subida | /festivales/ |
-| G01 | `g01_tienda_gourmet.jpg` | Estantería de tienda gourmet | No subida | /donde-encontrarlo/, /para-tu-local/ |
 | E01 | `e01_envio_caja.jpg` | Caja de envío con botellas | No subida | /envios/, /pedido/seguimiento/ |
 <!--/fotos-pendientes-->
+
+Fotos añadidas que hay que confirmar:
+
+- **O02 (exterior de la bodega):** es el edificio real de Bodegas Muñana, con la Ñ sobre la puerta. Hay que confirmar de dónde sale (autor, licencia y permiso de la bodega para usarla en un repositorio público). Mide 1.440 × 900 px, menos de los 2.000 px de ancho del banco: se ve bien en la web, pero conviene un original más grande. Va sin etiqueta porque es de la bodega; si no se confirma el permiso, hay que retirarla.
+- **G01 (tienda gourmet):** se ha registrado como «Propia (equipo con IA)» con «Imagen generada con IA», porque los textos de la imagen están deformados como en las imágenes generadas. Confirmar el origen. Se ve el producto, así que lleva también el mensaje de moderación. La pizarra de precio de la imagen no coincide con los precios de la tienda.
 
 Además, en `fotos/creditos.csv` faltan **autor, licencia y enlace** de todas las filas (también de las piezas propias). En /creditos/ las piezas propias salen como «Propia del equipo» y el resto como `[PENDIENTE]`.
 
