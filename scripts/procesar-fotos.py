@@ -53,6 +53,8 @@ OPCIONALES = {"P02", "P03", "K01", "CART"}
 LOGOS = {"LOGO-C", "LOGO-R", "SIMBOLO"}
 # Fotos de producto: llevan «Imagen ilustrativa del producto» y el mensaje de moderación.
 FOTOS_PRODUCTO = {"P01", "P02", "P03", "P04", "P06", "P07"}
+# Escenas en las que se ve el producto: llevan su etiqueta propia y, además, el mensaje de moderación.
+ESCENAS_CON_PRODUCTO = {"G01"}
 
 
 def leer_creditos():
@@ -305,7 +307,7 @@ def main():
         else:
             datos = procesar_raster(c, origen)
         datos["etiqueta"] = etiqueta_de(c)
-        datos["producto"] = c["id"] in FOTOS_PRODUCTO
+        datos["producto"] = c["id"] in FOTOS_PRODUCTO or c["id"] in ESCENAS_CON_PRODUCTO
         manifiesto[c["id"]] = datos
         print(f"  ✓ {c['id']:8} {c['archivo']}")
 
