@@ -173,8 +173,8 @@
     "etiqueta": "Imagen ilustrativa",
     "producto": false
   },
-  "O02": {
-    "base": "o02_bodega",
+  "O01": {
+    "base": "o01_vinedo_altura",
     "ancho": 1440,
     "alto": 900,
     "anchos": [
