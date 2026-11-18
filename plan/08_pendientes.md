@@ -9,9 +9,6 @@ La tabla se regenera sola con `python3 scripts/procesar-fotos.py`. En la web, ca
 <!--fotos-pendientes-->
 | ID | Archivo | Qué muestra | Motivo | Páginas con hueco |
 | --- | --- | --- | --- | --- |
-| O02 | `o02_bodega.jpg` | Interior de bodega | No subida | /origen/ |
-| O03 | `o03_uva_manos.jpg` | Racimo o vendimia a mano | No subida | /journal/spritz-flor-de-sauco/, /origen/ |
-| V01 | `v01_villa.jpg` | Casa rural entre viñedos | No subida | /eventos/ |
 | F01 | `f01_festival.jpg` | Público adulto en un festival | No subida | /festivales/ |
 | E01 | `e01_envio_caja.jpg` | Caja de envío con botellas | No subida | /envios/, /pedido/seguimiento/ |
 <!--/fotos-pendientes-->
@@ -20,6 +17,8 @@ Fotos añadidas que hay que confirmar:
 
 - **O01 (viñedo y bodega, cabecera de /origen/ y /spritz/):** es el edificio real de Bodegas Muñana, con la Ñ sobre la puerta. **Hay permiso de la bodega para usarla** (confirmado por el equipo). Conviene guardar ese permiso por escrito junto al TFM. Mide 1.440 × 900 px, menos de los 2.000 px de ancho del banco: se ve bien en la web, pero si la bodega tiene el original más grande, mejor. Va sin etiqueta porque es de la bodega.
 - **G01 (tienda gourmet):** se ha registrado como «Propia (equipo con IA)» con «Imagen generada con IA», porque los textos de la imagen están deformados como en las imágenes generadas. Confirmar el origen. Se ve el producto, así que lleva también el mensaje de moderación. La pizarra de precio de la imagen no coincide con los precios de la tienda.
+
+- **O02 (barricas), O03 (racimo) y V01 (casa de piedra con tinaja):** llegaron como capturas del móvil de 360 px de ancho, con bandas blancas, que se han recortado. Se ven bien en el móvil, pero en escritorio salen borrosas, sobre todo O03 a ancho completo en /journal/spritz-flor-de-sauco/. **Subid los originales a `fotos/` con el mismo nombre** (`o02_bodega.jpg`, `o03_uva_manos.jpg`, `v01_villa.jpg`) y el proceso automático los sustituye. Fuente registrada: «Bodegas Muñana (pendiente de confirmar)». Hay que confirmar que son de la bodega, que hay permiso y si la casa de piedra es de verdad Villa Flamenco. Si no lo es, debe llevar «Imagen ilustrativa».
 
 Además, en `fotos/creditos.csv` faltan **autor, licencia y enlace** de todas las filas (también de las piezas propias). En /creditos/ las piezas propias salen como «Propia del equipo» y el resto como `[PENDIENTE]`.
 

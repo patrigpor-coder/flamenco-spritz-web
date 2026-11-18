@@ -190,6 +190,45 @@
     "etiqueta": "",
     "producto": false
   },
+  "O02": {
+    "base": "o02_bodega",
+    "ancho": 360,
+    "alto": 380,
+    "anchos": [
+      320,
+      360
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "",
+    "producto": false
+  },
+  "O03": {
+    "base": "o03_uva_manos",
+    "ancho": 360,
+    "alto": 346,
+    "anchos": [
+      320,
+      360
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "",
+    "producto": false
+  },
+  "V01": {
+    "base": "v01_villa",
+    "ancho": 360,
+    "alto": 262,
+    "anchos": [
+      320,
+      360
+    ],
+    "avif": true,
+    "transparente": false,
+    "etiqueta": "",
+    "producto": false
+  },
   "C01": {
     "base": "c01_granada",
     "ancho": 1600,
